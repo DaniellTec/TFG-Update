@@ -1,9 +1,10 @@
 import Layout from "./components/Layout";
-import Footer from "./components/footer";
+//import Footer from "./components/footer";
 
 import { Switch, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import CookieConsent from "react-cookie-consent";
 
+import Home from "./pages/home";
 import Artists from "./pages/artists";
 import Art from "./pages/art";
 import Designs from "./pages/designs";
@@ -16,8 +17,8 @@ function App() {
     return (
         <Layout>
             <Switch>
-                <Route path="/" exact>
-                    <Home />
+                <Route path="/home" exact>
+                    <Home/>
                 </Route>
                 <Route path="/artists">
                     <Artists />
@@ -41,9 +42,27 @@ function App() {
                     <Sign/>
                 </Route>
             </Switch>
-            <Footer/>
-        </Layout>
-        
+            {/*<Footer/>*/}
+            <CookieConsent 
+                debug={true}
+                location="bottom"
+                cookieName="annoyingCookie"
+                buttonText="Aceptar Cookies"
+                buttonStyle={{color: "#000", background: "#a3a2f7", fontSize: "15px", fontFamily: "inherit", borderRadius: "5px"}}
+                style={{background: '#1c1d1c', textAlign: 'center'}}
+                expires={180}
+                
+                enableDeclineButton
+                declineButtonText="Denegar Cookies"
+                declineButtonStyle={{color: "#000", background: "#f7a2cb", fontSize: "15px", fontFamily: "inherit", borderRadius: "5px"}}
+                onDecline={() => {
+                  alert("Acepta las cookies! Añadir Sweet Alert");
+                }}
+                >Esta web usa cookies para mejorar la experiencia de usuario.<br/>
+                <a href=""> Para saber más</a>
+            </CookieConsent>
+          </Layout>
+       
     );
 }
 

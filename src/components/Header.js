@@ -44,8 +44,8 @@ const Header = () => {
     return (
         <header className={classes.header}>
             <div className={classes.header__content}>
-                <Link to="/" className={classes.header__content__logo}>
-                    navbar
+                <Link to="/home" className={classes.header__content__logo}>
+                    TFG
                 </Link>
                 <nav
                     className={`${classes.header__content__nav} ${
@@ -53,6 +53,11 @@ const Header = () => {
                     }`}
                 >
                     <ul>
+                        <li>
+                            <Link to="/home" onClick={menuToggleHandler}>
+                                Inicio
+                            </Link>
+                        </li>
                         <li>
                             <Link to="/artists" onClick={menuToggleHandler}>
                                 Artistas
