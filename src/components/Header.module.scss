@@ -115,6 +115,30 @@
                 }
             }
 
+            .buttonA{
+                cursor: pointer;
+                outline: none;
+                padding: 0.75rem 1.25rem;
+                border-radius: $borderRadius;
+                font-size: 1rem;
+                font-family: inherit;
+                background: $primary;
+                color: $dark;
+                border: 1px solid transparent;
+                transition: 0.3s ease all;
+
+                &:hover {
+                    border-color: $primary;
+                 
+                    color: $primary;
+                }
+                &:active {
+                    border-color: $primary;
+                    background: linear-gradient(rgba($primary, 0.2), rgba($primary, 0.3));
+                    color: $primary;
+                }
+            }
+
             &.isMenu {
                 transform: translate(100%);
             }

@@ -17,7 +17,7 @@ const Carousel = () => {
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src={image1}  width="1500" height="530" alt="..."/>
+      <img src={image1}  width="1500" height="490" alt="..."/>
     </div>
     <div class="carousel-item">
       <img src={image2} class="responsive" alt="..."/>

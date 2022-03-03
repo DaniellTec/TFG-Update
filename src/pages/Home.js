@@ -1,10 +1,10 @@
 import React from "react";
-import Carousel from "../components/Carousel";
+import Slider from "../components/Slider";
 
 const Home = () => {
     return<div>
-    <Carousel/>
-    <br></br>
+        <br></br>
+    <Slider/>
 </div>
 
 };

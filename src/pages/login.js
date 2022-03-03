@@ -27,7 +27,7 @@ export default class Button extends Component {
   return (
 
   <section class="vh-100 gradient-custom">
-    <br/><br/><br/><br/><br/>
+    <br/>
       <div class="col-md-6 col-lg-4 offset-lg-4 offset-md-3 mt-5">
           <div class="bg-light p-5 border shadow">
 

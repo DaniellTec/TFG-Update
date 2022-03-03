@@ -36,10 +36,16 @@ const Header = () => {
         setMenuOpen((p) => !p);
     };
 
-    const ctaClickHandler = () => {
+    {/*const ctaClickHandler = () => {
         menuToggleHandler();
         history.push("/login");
     };
+
+    const ctbClickHandler = () => {
+        menuToggleHandler();
+        history.push("/sign");
+    };
+    */}
 
     return (
         <header className={classes.header}>
@@ -82,9 +88,22 @@ const Header = () => {
                             <Link to="/about" onClick={menuToggleHandler}>
                                 Sobre Nosotros
                             </Link>
-                        </li>               
+                        </li>
+                        <li>
+                            <Link to="/login" onClick={menuToggleHandler}>
+                                Login
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/sign" onClick={menuToggleHandler}>
+                                Sign In
+                            </Link>
+                        </li>                
                     </ul>
-                    <button onClick={ctaClickHandler}>Login</button>
+                    {/*<button onClick={ctaClickHandler}>Login</button> 
+                    &nbsp;
+                    <button className="buttonA" onClick={ctbClickHandler}>Sign in</button>
+                */}
                 </nav>
                 <div className={classes.header__content__toggle}>
                     {!menuOpen ? (
