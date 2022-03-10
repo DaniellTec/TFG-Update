@@ -4,7 +4,7 @@ import Layout from "./components/Layout";
 import { Switch, Route } from "react-router-dom";
 import CookieConsent from "react-cookie-consent";
 
-import Home from "./pages/home";
+//import Home from "./pages/home";
 import Artists from "./pages/artists";
 import Art from "./pages/art";
 import Designs from "./pages/designs";
@@ -17,9 +17,9 @@ function App() {
     return (
         <Layout>
             <Switch>
-                <Route path="/home" exact>
+                {/*<Route path="/home" exact>
                     <Home/>
-                </Route>
+    </Route>*/}
                 <Route path="/artists">
                     <Artists />
                 </Route>
