@@ -76,7 +76,7 @@ const Slide = () => {
             {data.map((item, index)=>{
                 return(
                     <div className="pics" key={index} onClick={() => getImg(item.imgSrc)}> 
-                        <img src={item.imgSrc} style={{width: '100%'}}/>
+                        <img src={item.imgSrc} style={{width: '100%'}} class="rounded border border-dark"/>
                     </div>
                 )
             })}

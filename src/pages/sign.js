@@ -29,7 +29,7 @@ export default class Button extends Component {
   return (
 
   <section class="vh-100 gradient-custom">
-    <br/>    <br/>
+    <br/>
       <div class="col-md-6 col-lg-4 offset-lg-4 offset-md-3 mt-5">
           <div class="bg-light p-5 border shadow">
 
@@ -59,7 +59,8 @@ export default class Button extends Component {
                       <a href="#" class="float-end">Reset Password</a>
                   </div>
                 */}
-                  <button type="submit" class="btn btn-primary w-100 my-3 shadow"><img src={google}/>  Sign Up With Google</button>
+                  <button type="submit" class="btn btn-primary w-100 my-3 shadow">{/*<img src={google}/>*/} <FaGoogle/>  Sign Up With Google</button>
+                  <hr/>
                   <button type="submit" class="btn btn-dark w-100 my-3 shadow">Sign Up</button>
                   <p class="text-center m-0">Ya tienes una cuenta? <a href="login">Please Sign In</a></p>
               </form>

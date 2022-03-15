@@ -3,6 +3,7 @@ import Layout from "./components/Layout";
 
 import { Switch, Route } from "react-router-dom";
 import CookieConsent from "react-cookie-consent";
+import Swal from 'sweetalert2';
 
 import Home from "./pages/home";
 import Artists from "./pages/artists";
@@ -13,16 +14,13 @@ import About from "./pages/about";
 import Login from './pages/login';
 import Sign from './pages/sign';
 
-import Swal from 'sweetalert2';
-import withReactContent from "sweetalert2-react-content";
-
 function App() {
     return (
         <Layout>
             <Switch>
                 <Route path="/home" exact>
                     <Home/>
-    </Route>
+                </Route>
                 <Route path="/artists">
                     <Artists />
                 </Route>
