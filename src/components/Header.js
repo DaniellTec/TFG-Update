@@ -6,6 +6,8 @@ import { AiOutlineClose } from "react-icons/ai";
 import classes from "./Header.module.scss";
 import { Link, useHistory } from "react-router-dom";
 
+import { FaUserAlt } from "react-icons/fa";
+
 const Header = () => {
     const history = useHistory();
     const [menuOpen, setMenuOpen] = useState(false);
@@ -64,21 +66,23 @@ const Header = () => {
                                 Inicio
                             </Link>
                         </li>
-                        <li>
+                        {/*<li>
                             <Link to="/artists" onClick={menuToggleHandler}>
                                 Artistas
                             </Link>
                         </li>
+                        */}
                         <li>
                             <Link to="/art" onClick={menuToggleHandler}>
                                 Arte
                             </Link>
                         </li>
-                        <li>
+                        {/*<li>
                             <Link to="/designs" onClick={menuToggleHandler}>
                                 Diseños
                             </Link>
                         </li>
+                        */}
                         <li>
                             <Link to="/events" onClick={menuToggleHandler}>
                                 Eventos
@@ -91,14 +95,9 @@ const Header = () => {
                         </li>
                         <li>
                             <Link to="/login" onClick={menuToggleHandler}>
-                                Login
+                            <FaUserAlt/>
                             </Link>
-                        </li>
-                        <li>
-                            <Link to="/sign" onClick={menuToggleHandler}>
-                                Sign In
-                            </Link>
-                        </li>                
+                        </li>         
                     </ul>
                     {/*<button onClick={ctaClickHandler}>Login</button> 
                     &nbsp;

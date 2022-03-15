@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import '../css/styles.css';
 import { IconName } from "react-icons/bs";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
+import { FaGoogle } from "react-icons/fa";
+import google from '../images/icons/test.ico';
 import "bootstrap/dist/css/bootstrap.min.css";
 //import VisibilityIcon from '@mui/icons-material/Visibility';
 //import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
@@ -27,7 +29,7 @@ export default class Button extends Component {
   return (
 
   <section class="vh-100 gradient-custom">
-    <br/>
+    <br/>    <br/>
       <div class="col-md-6 col-lg-4 offset-lg-4 offset-md-3 mt-5">
           <div class="bg-light p-5 border shadow">
 
@@ -57,8 +59,9 @@ export default class Button extends Component {
                       <a href="#" class="float-end">Reset Password</a>
                   </div>
                 */}
-                  <button type="submit" class="btn btn-primary w-100 my-3 shadow">Register</button>
-                  <p class="text-center m-0">Have An account? <a href="login">Please Log in</a></p>
+                  <button type="submit" class="btn btn-primary w-100 my-3 shadow"><img src={google}/>  Sign Up With Google</button>
+                  <button type="submit" class="btn btn-dark w-100 my-3 shadow">Sign Up</button>
+                  <p class="text-center m-0">Ya tienes una cuenta? <a href="login">Please Sign In</a></p>
               </form>
           </div>
       </div>

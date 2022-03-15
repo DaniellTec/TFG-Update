@@ -4,7 +4,7 @@ import Layout from "./components/Layout";
 import { Switch, Route } from "react-router-dom";
 import CookieConsent from "react-cookie-consent";
 
-//import Home from "./pages/home";
+import Home from "./pages/home";
 import Artists from "./pages/artists";
 import Art from "./pages/art";
 import Designs from "./pages/designs";
@@ -13,13 +13,16 @@ import About from "./pages/about";
 import Login from './pages/login';
 import Sign from './pages/sign';
 
+import Swal from 'sweetalert2';
+import withReactContent from "sweetalert2-react-content";
+
 function App() {
     return (
         <Layout>
             <Switch>
-                {/*<Route path="/home" exact>
+                <Route path="/home" exact>
                     <Home/>
-    </Route>*/}
+    </Route>
                 <Route path="/artists">
                     <Artists />
                 </Route>
@@ -51,12 +54,32 @@ function App() {
                 buttonStyle={{color: "#000", background: "#a3a2f7", fontSize: "15px", fontFamily: "inherit", borderRadius: "5px"}}
                 style={{background: '#1c1d1c', textAlign: 'center'}}
                 expires={180}
+
+                onAccept={(acceptedByScrolling) => {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Cookies aceptadas',
+                        showConfirmButton: false,
+                        timer: 1500
+                      })
+                  }}
                 
                 enableDeclineButton
                 declineButtonText="Denegar Cookies"
-                declineButtonStyle={{color: "#000", background: "#f7a2cb", fontSize: "15px", fontFamily: "inherit", borderRadius: "5px"}}
+                declineButtonStyle={{color: "#000", background: "#f7a2cb",  fontSize: "15px", fontFamily: "inherit", borderRadius: "5px"}}
+             
                 onDecline={() => {
-                  alert("Acepta las cookies! Añadir Sweet Alert");
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...ha habido un error',
+                        text: 'Tienes que aceptar las cookies.',
+                        timer: 1500
+                      }).then((result) => {
+                         if(result){
+                           // Do Stuff here for success
+                           window.location.reload();
+                         }
+                      })
                 }}
                 >Esta web usa cookies para mejorar la experiencia de usuario.<br/>
                 <a href=""> Para saber más</a>
