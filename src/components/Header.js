@@ -8,6 +8,8 @@ import { Link, useHistory } from "react-router-dom";
 
 import { FaUserAlt } from "react-icons/fa";
 
+import icon from '../images/icons/icon.ico';
+
 const Header = () => {
     const history = useHistory();
     const [menuOpen, setMenuOpen] = useState(false);
@@ -53,7 +55,7 @@ const Header = () => {
         <header className={classes.header}>
             <div className={classes.header__content}>
                 <Link to="/home" className={classes.header__content__logo}>
-                    TFG
+                <img src={icon}/>
                 </Link>
                 <nav
                     className={`${classes.header__content__nav} ${

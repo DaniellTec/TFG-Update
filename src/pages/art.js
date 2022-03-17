@@ -1,117 +1,139 @@
 import React from 'react'
 import '../css/styles.css';
 
-import PlusIcon from '../images/artists/pluss.png';
+import artIcon from '../images/icons/art.jpg';
 
 import { BsPlusCircleFill } from "react-icons/bs";
+
+import { FaEuroSign } from "react-icons/fa";
+import { FcLike } from "react-icons/fc";
+
+import CarouselArt from '../components/CarouselArt';
 
 const Art = () => {
   return (
     <> 
-      <div>
-        <br/><br/>
-          <h1 className="center"> 
-              Arte<br/><br/>
-          </h1>
-      </div>    
 
-      <table>
-  <tr>
-  <td>
-      <img src={PlusIcon} className="items"/>
-          <center><td className="tdt"><BsPlusCircleFill/></td></center>    
-      </td>
-      &nbsp;  &nbsp;  &nbsp;
-      <td>
-      <img src={PlusIcon} width="200" height="200" className="items"/>
-          <center><td className="tdt"><BsPlusCircleFill/></td></center> 
-      </td>
-      &nbsp;  &nbsp;  &nbsp;
-      <td>
-      <img src={PlusIcon} className="items"/>
-          <center><td className="tdt"><BsPlusCircleFill/></td></center> 
-      </td>
-      &nbsp;  &nbsp;  &nbsp;
-      <td>
-      <img src={PlusIcon} className="items"/>
-          <center><td className="tdt"><BsPlusCircleFill/></td></center> 
-      </td>
-       &nbsp;  &nbsp;  &nbsp;
-      <td>
-      <img src={PlusIcon} className="items"/>
-          <center><td className="tdt"><BsPlusCircleFill/></td></center> 
-      </td>
-  </tr>
-  <tr>
-      
-  </tr>
-</table>
-<br/>
+    <CarouselArt />       
+
 <table>
   <tr>
   <td>
-      <img src={PlusIcon} className="items"/>
-          <center><td className="tdt"><BsPlusCircleFill/></td></center>    
+      <div class = "box">
+      <button className="imageProductButton"><br/><img src={artIcon} className="items"/></button> <br/><br/>
+      <p align = "center">Description<b className="price"> <FaEuroSign/> 0,01</b> <p align = "left">5.0<FcLike/></p> </p>
+      {/*<button class="btn btn-dark"><center><td className="tdt">Add To Cart</td></center></button>*/}
+      </div>
       </td>
-      &nbsp;  &nbsp;  &nbsp;
+      &nbsp;  &nbsp; 
       <td>
-      <img src={PlusIcon} width="200" height="200" className="items"/>
-          <center><td className="tdt"><BsPlusCircleFill/></td></center> 
+      <div class = "box">
+      <button className="imageProductButton"><br/><img src={artIcon} className="items"/></button> <br/><br/>
+      <p align = "center">Description<b className="price"> <FaEuroSign/> 0,01</b> <p align = "left">5.0<FcLike/></p> </p>
+      {/*<button class="btn btn-dark"><center><td className="tdt">Add To Cart</td></center></button>*/}
+      </div>
       </td>
-      &nbsp;  &nbsp;  &nbsp;
+      &nbsp;  &nbsp; 
       <td>
-      <img src={PlusIcon} className="items"/>
-          <center><td className="tdt"><BsPlusCircleFill/></td></center> 
+      <div class = "box">
+      <button className="imageProductButton"><br/><img src={artIcon} className="items"/></button> <br/><br/>
+      <p align = "center">Description<b className="price"> <FaEuroSign/> 0,01</b> <p align = "left">5.0<FcLike/></p> </p>
+      {/*<button class="btn btn-dark"><center><td className="tdt">Add To Cart</td></center></button>*/}
+      </div>
       </td>
-      &nbsp;  &nbsp;  &nbsp;
+      &nbsp;  &nbsp; 
       <td>
-      <img src={PlusIcon} className="items"/>
-          <center><td className="tdt"><BsPlusCircleFill/></td></center> 
+      <div class = "box">
+      <button className="imageProductButton"><br/><img src={artIcon} className="items"/></button> <br/><br/>
+      <p align = "center">Description<b className="price"> <FaEuroSign/> 0,01</b> <p align = "left">5.0<FcLike/></p> </p>
+      {/*<button class="btn btn-dark"><center><td className="tdt">Add To Cart</td></center></button>*/}
+      </div>
       </td>
-       &nbsp;  &nbsp;  &nbsp;
-      <td>
-      <img src={PlusIcon} className="items"/>
-          <center><td className="tdt"><BsPlusCircleFill/></td></center> 
-      </td>
+       &nbsp;  &nbsp; 
   </tr>
-  <tr>
-      
-  </tr>
+ <tr>
+</tr>
 </table>
-
 <br/>
+
 <table>
   <tr>
   <td>
-      <img src={PlusIcon} className="items"/>
-          <center><td className="tdt"><BsPlusCircleFill/></td></center>    
+      <div class = "box">
+      <button className="imageProductButton"><br/><img src={artIcon} className="items"/></button> <br/><br/>
+      <p align = "center">Description<b className="price"> <FaEuroSign/> 0,01</b> <p align = "left">5.0<FcLike/></p> </p>
+      {/*<button class="btn btn-dark"><center><td className="tdt">Add To Cart</td></center></button>*/}
+      </div>
       </td>
-      &nbsp;  &nbsp;  &nbsp;
+      &nbsp;  &nbsp; 
       <td>
-      <img src={PlusIcon} width="200" height="200" className="items"/>
-          <center><td className="tdt"><BsPlusCircleFill/></td></center> 
+      <div class = "box">
+      <button className="imageProductButton"><br/><img src={artIcon} className="items"/></button> <br/><br/>
+      <p align = "center">Description<b className="price"> <FaEuroSign/> 0,01</b> <p align = "left">5.0<FcLike/></p> </p>
+      {/*<button class="btn btn-dark"><center><td className="tdt">Add To Cart</td></center></button>*/}
+      </div>
       </td>
-      &nbsp;  &nbsp;  &nbsp;
+      &nbsp;  &nbsp; 
       <td>
-      <img src={PlusIcon} className="items"/>
-          <center><td className="tdt"><BsPlusCircleFill/></td></center> 
+      <div class = "box">
+      <button className="imageProductButton"><br/><img src={artIcon} className="items"/></button> <br/><br/>
+      <p align = "center">Description<b className="price"> <FaEuroSign/> 0,01</b> <p align = "left">5.0<FcLike/></p> </p>
+      {/*<button class="btn btn-dark"><center><td className="tdt">Add To Cart</td></center></button>*/}
+      </div>
       </td>
-      &nbsp;  &nbsp;  &nbsp;
+      &nbsp;  &nbsp; 
       <td>
-      <img src={PlusIcon} className="items"/>
-          <center><td className="tdt"><BsPlusCircleFill/></td></center> 
+      <div class = "box">
+      <button className="imageProductButton"><br/><img src={artIcon} className="items"/></button> <br/><br/>
+      <p align = "center">Description<b className="price"> <FaEuroSign/> 0,01</b> <p align = "left">5.0<FcLike/></p> </p>
+      {/*<button class="btn btn-dark"><center><td className="tdt">Add To Cart</td></center></button>*/}
+      </div>
       </td>
-       &nbsp;  &nbsp;  &nbsp;
-      <td>
-      <img src={PlusIcon} className="items"/>
-          <center><td className="tdt"><BsPlusCircleFill/></td></center> 
-      </td>
+       &nbsp;  &nbsp; 
   </tr>
-  <tr>
-      
-  </tr>
+ <tr>
+</tr>
 </table>
+<br/>
 
+<table>
+  <tr>
+  <td>
+      <div class = "box">
+      <button className="imageProductButton"><br/><img src={artIcon} className="items"/></button> <br/><br/>
+      <p align = "center">Description<b className="price"> <FaEuroSign/> 0,01</b> <p align = "left">5.0<FcLike/></p> </p>
+      {/*<button class="btn btn-dark"><center><td className="tdt">Add To Cart</td></center></button>*/}
+      </div>
+      </td>
+      &nbsp;  &nbsp; 
+      <td>
+      <div class = "box">
+      <button className="imageProductButton"><br/><img src={artIcon} className="items"/></button> <br/><br/>
+      <p align = "center">Description<b className="price"> <FaEuroSign/> 0,01</b> <p align = "left">5.0<FcLike/></p> </p>
+      {/*<button class="btn btn-dark"><center><td className="tdt">Add To Cart</td></center></button>*/}
+      </div>
+      </td>
+      &nbsp;  &nbsp; 
+      <td>
+      <div class = "box">
+      <button className="imageProductButton"><br/><img src={artIcon} className="items"/></button> <br/><br/>
+      <p align = "center">Description<b className="price"> <FaEuroSign/> 0,01</b> <p align = "left">5.0<FcLike/></p> </p>
+      {/*<button class="btn btn-dark"><center><td className="tdt">Add To Cart <br/> </td></center></button>*/}
+      </div>
+      </td>
+      &nbsp;  &nbsp; 
+      <td>
+      <div class = "box">
+      <button className="imageProductButton"><br/><img src={artIcon} className="items"/></button> <br/><br/>
+       <p align = "center">Description<b className="price"> <FaEuroSign/> 0,01</b> <p align = "left">5.0<FcLike/></p> </p>
+      {/*<button class="btn btn-dark"><center><td className="tdt">Add To Cart</td></center></button>*/}
+      </div>
+      </td>
+       &nbsp;  &nbsp; 
+  </tr>
+ <tr>
+</tr>
+</table>
     </>
   );
 };

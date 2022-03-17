@@ -19,11 +19,9 @@ import image15 from '../images/carousel/image15.jpg';
 import image16 from '../images/carousel/image16.jpg';
 import image17 from '../images/carousel/imagetest2.jpg';
 
-import "./Slider.js";
-
 //import '../css/styles.css';
 
-import "./Slider.css";
+import "./gallery.css";
 
 const Slide = () => {
     let data =[
