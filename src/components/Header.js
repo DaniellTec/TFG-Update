@@ -6,7 +6,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import classes from "./Header.module.scss";
 import { Link, useHistory } from "react-router-dom";
 
-import { FaUserAlt } from "react-icons/fa";
+import { FaUserAlt, FaShoppingCart } from "react-icons/fa";
 
 import icon from '../images/icons/icon.ico';
 
@@ -55,19 +55,15 @@ const Header = () => {
         <header className={classes.header}>
             <div className={classes.header__content}>
                 <Link to="/home" className={classes.header__content__logo}>
-                <img src={icon}/>
+                TFG-UPDATE
                 </Link>
                 <nav
                     className={`${classes.header__content__nav} ${
                         menuOpen && size.width < 768 ? classes.isMenu : ""
                     }`}
                 >
+                    
                     <ul>
-                        <li>
-                            <Link to="/home" onClick={menuToggleHandler}>
-                                Inicio
-                            </Link>
-                        </li>
                         {/*<li>
                             <Link to="/artists" onClick={menuToggleHandler}>
                                 Artistas
@@ -76,7 +72,7 @@ const Header = () => {
                         */}
                         <li>
                             <Link to="/art" onClick={menuToggleHandler}>
-                                Arte
+                                Pinturas
                             </Link>
                         </li>
                         {/*<li>
@@ -87,19 +83,24 @@ const Header = () => {
                         */}
                         <li>
                             <Link to="/events" onClick={menuToggleHandler}>
-                                Eventos
+                                Fotografías
                             </Link>
                         </li>
                         <li>
                             <Link to="/about" onClick={menuToggleHandler}>
-                                Sobre Nosotros
+                                Eventos
                             </Link>
                         </li>
                         <li>
                             <Link to="/login" onClick={menuToggleHandler}>
-                            <FaUserAlt/>
+                            Log in | Register
                             </Link>
-                        </li>         
+                        </li>
+                        <li>
+                            <Link to="/login" onClick={menuToggleHandler}>
+                            <FaShoppingCart/>
+                            </Link>
+                        </li>              
                     </ul>
                     {/*<button onClick={ctaClickHandler}>Login</button> 
                     &nbsp;
