@@ -19,41 +19,18 @@ import image15 from '../images/carousel/image15.jpg';
 import image16 from '../images/carousel/image16.jpg';
 import image17 from '../images/carousel/imagetest2.jpg';
 
+import blacksad from '../images/home/1.jpg';
+
 //import '../css/styles.css';
 
-import "./gallery.css";
+import "../components/gallery.css";
 
 const Slide = () => {
     let data =[
         {
             id:1,
-            imgSrc:image14
-        },
-        {
-            id:2,
-            imgSrc:image10
-        },
-        {
-            id:3,
-            imgSrc:image12
-        },
-        {
-            id:4,
-            imgSrc:image8
-        },
-        {
-            id:5,
-            imgSrc:image3
-        },
-        {
-            id:6,
-            imgSrc:image15
-        },
-        //remove?
-        {
-            id:8,
-            imgSrc:image17
-        },
+            imgSrc:blacksad
+        }
     ]
     const [model, setModel] = useState(false);
     const [tempimgSrc, setTempImgSrc] = useState('');

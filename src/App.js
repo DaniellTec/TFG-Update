@@ -6,13 +6,17 @@ import CookieConsent from "react-cookie-consent";
 import Swal from 'sweetalert2';
 
 import Home from "./pages/home";
-import Artists from "./pages/artists";
-import Art from "./pages/art";
-import Designs from "./pages/designs";
-import Events from "./pages/events";
-import About from "./pages/about";
+import Paint from "./pages/paint";
+import Abstract from "./pages/abstract";
+import Oil from "./pages/oil";
+
+import Photo from "./pages/photo";
+
+import Museum from "./pages/museum";
 import Login from './pages/login';
 import Sign from './pages/sign';
+
+import Product from './pages/testProduct';
 
 function App() {
     return (
@@ -21,26 +25,29 @@ function App() {
                 <Route path="/home" exact>
                     <Home/>
                 </Route>
-                <Route path="/artists">
-                    <Artists />
+                <Route path="/paint">
+                    <Paint/>
                 </Route>
-                <Route path="/art">
-                    <Art/>
+                <Route path="/abstract">
+                    <Abstract/>
                 </Route>
-                <Route path="/designs">
-                    <Designs/>
+                <Route path="/oil">
+                    <Oil/>
                 </Route>
-                <Route path="/events">
-                    <Events/>
+                <Route path="/photo">
+                    <Photo/>
                 </Route>
-                <Route path="/about">
-                    <About/>
+                <Route path="/museum">
+                    <Museum/>
                 </Route>
                 <Route path="/login">
                     <Login/>
                 </Route>
                 <Route path="/sign">
                     <Sign/>
+                </Route>
+                <Route path="/testProduct">
+                    <Product/>
                 </Route>
             </Switch>
             {/*<Footer/>*/}

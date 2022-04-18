@@ -5,6 +5,8 @@ import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
 import blacksad from '../images/home/1.jpg';
 import face from '../images/home/2.jpg';
+import lake from '../images/home/11.jpg';
+import mountain from '../images/home/12.jpg';
 
 import image1 from '../images/home/8.jpg';
 import image2 from '../images/home/9.jpg';
@@ -14,24 +16,24 @@ import image4 from '../images/home/7.jpg';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
-import CarouselArt from '../components/CarouselArt';
+import CarouselPaint from '../components/CarouselArt';
 import Footer from '../components/footer';
 
 const Home = () => {
   return (
     <> 
 
-    <CarouselArt />       
+    <CarouselPaint />       
 
     <br/>
     <center>
-    <button class="button"> <Link to="/card" style={{ color: "black" }}> Pinturas </Link></button>
-    <button class="button"> <Link to="/art" style={{ color: "black" }}> Arte abstracto </Link>  </button>
-    <button class="button"> <Link to="/art" style={{ color: "black" }}> Óleos </Link> </button>
-    <button class="button"> <Link to="/art" style={{ color: "black" }}> Paisajes </Link> </button>
-    <button class="button"> <Link to="/art" style={{ color: "black" }}> Colecciones </Link> </button>
-    <button class="button"> <Link to="/art" style={{ color: "black" }}> Esculturas </Link> </button>
-    <button class="button"> <Link to="/art" style={{ color: "black" }}> Destacados </Link> </button>
+    <button class="button"> <Link to="/paint" style={{ color: "black" }}> Pinturas </Link></button>
+    <button class="button"> <Link to="/abstract" style={{ color: "black" }}> Arte abstracto </Link>  </button>
+    <button class="button"> <Link to="/oil" style={{ color: "black" }}> Óleos </Link> </button>
+    <button class="button"> <Link to="/landscape" style={{ color: "black" }}> Paisajes </Link> </button>
+    <button class="button"> <Link to="/colection" style={{ color: "black" }}> Colecciones </Link> </button>
+    <button class="button"> <Link to="/photo" style={{ color: "black" }}> Fotografías </Link> </button>
+    <button class="button"> <Link to="/featured" style={{ color: "black" }}> Destacados </Link> </button>
     </center>
     <hr/>
     <br/>
@@ -39,61 +41,44 @@ const Home = () => {
     <h1 class="center">
       Destacados
     </h1>
- {/*}   
-<div class="center">
-    <div class="row">
-  <div class="col-md-5">
-    <div class="card">
+
+
+<div class="row">
+  <div class="col-md-3">
       <div class="card-body">
       <div class="product-2 align-items-center p-2 text-center">
-      <img src={blacksad} alt="" class="rounded"/>
-      <h5>Blacksad</h5>
-      <div class="mt-3 info">
-        <span class="text-1 d-block">Juan Dían Canales, Juanjo Guarnido</span>
-      </div>  
+      <img src={blacksad} alt="" class="rounded img-fluid" width="400"/>
+      <h5>Blacksad - Juan Dían Canales, Juanjo Guarnido</h5>
     </div>
-  </div>
  </div> 
 </div>
 
- <div class="col-md-5">
-    <div class="card">
+ <div class="col-md-3">
       <div class="card-body">
       <div class="product-2 align-items-center p-2 text-center">
-      <img src={face} alt="" class="rounded"/>
-      <h5>Face</h5>
-      <div class="mt-3 info">
-        <span class="text-1 d-block">José Villaseñor</span>
-      </div>  
+      <img src={face} alt="" class="rounded center"/>
+      <h5>Face - José Villaseñor</h5>
     </div>
-  </div>
  </div> 
-</div>    
+</div> 
+<div class="col-md-3">
+      <div class="card-body">
+      <div class="product-2 align-items-center p-2 text-center">
+      <img src={lake} alt="" class="rounded img-fluid" width="315"/>
+      <h5>Lake - Den Belitsky</h5>
+    </div>
+ </div> 
 </div>
-</div>*/}
 
-    <table>
-  <tr>
-  <td>
-      <div>
-      <button className="imageProductButton"><br/><img src={blacksad} class="img-fluid" width="400"/></button> <br/><br/>
-      <p class="featured">Blacksad - Juan Dían Canales, Juanjo Guarnido</p>
-      {/*<button class="btn btn-dark"><center><td className="tdt">Add To Cart</td></center></button>*/}
-      </div>
-      </td>
-      &nbsp;  &nbsp; 
-      <td>
-      <div>
-      <button className="imageProductButton"><br/><img src={face} class="img-fluid" width="400"/></button> <br/><br/>
-      <p class="featured">Face - José Villaseñor</p>
-      {/*<button class="btn btn-dark"><center><td className="tdt">Add To Cart</td></center></button>*/}
-      </div>
-      </td>
-      &nbsp;  &nbsp; 
-  </tr>
- <tr>
-</tr>
-</table>
+ <div class="col-md-3">
+      <div class="card-body">
+      <div class="product-2 align-items-center p-2 text-center">
+      <img src={mountain} alt="" class="rounded center" width="295"/>
+      <h5>Mountain - Unknown</h5>
+    </div>
+ </div> 
+</div> 
+</div>
 
 <hr/>
 <br/>
@@ -116,7 +101,7 @@ const Home = () => {
       </div>  
       <div class="cost mt-3 text-dark">
         <span>$0.00</span><br/>
-        <span><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></span>
+        <span class="color"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></span>
         {/*<div class="p-3 art text-center text-dark mt-3 cursor">
                 <hr/>
           <span class="text-uppercase">Añadir al carrito</span>
@@ -139,7 +124,7 @@ const Home = () => {
       </div>  
       <div class="cost mt-3 text-dark">
         <span>$0.00</span><br/>
-        <span><FaStar/><FaStar/><FaStar/><FaRegStar/><FaRegStar/></span>
+        <span class="color"><FaStar/><FaStar/><FaStar/><FaRegStar/><FaRegStar/></span>
         {/*<div class="p-3 art text-center text-dark mt-3 cursor">
                 <hr/>
           <span class="text-uppercase">Añadir al carrito</span>
@@ -162,7 +147,7 @@ const Home = () => {
       </div>  
       <div class="cost mt-3 text-dark">
         <span>$0.00</span><br/>
-        <span><FaStar/><FaStar/><FaStarHalfAlt/><FaRegStar/><FaRegStar/></span>
+        <span class="color"><FaStar/><FaStar/><FaStarHalfAlt/><FaRegStar/><FaRegStar/></span>
         {/*<div class="p-3 art text-center text-dark mt-3 cursor">
                 <hr/>
           <span class="text-uppercase">Añadir al carrito</span>
@@ -184,7 +169,7 @@ const Home = () => {
       </div>  
       <div class="cost mt-3 text-dark">
         <span>$0.00</span><br/>
-        <span><FaStar/><FaStar/><FaStar/><FaStar/><FaStarHalfAlt/></span>
+        <span class="color"><FaStar/><FaStar/><FaStar/><FaStar/><FaStarHalfAlt/></span>
         {/*<div class="p-3 art text-center text-dark mt-3 cursor">
                 <hr/>
           <span class="text-uppercase">Añadir al carrito</span>
