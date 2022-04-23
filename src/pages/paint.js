@@ -51,10 +51,10 @@ const Paint = () => {
       </div>  
       <div class="cost mt-3 text-dark">
         <span class="color"><FaStar/><FaStarHalfAlt/><FaRegStar/><FaRegStar/><FaRegStar/></span><br/>
-        <span>$0.00</span>
+        <span>$10.00</span>
         <div class="p-3 art text-center text-dark mt-3 cursor">
                 <hr/>
-          <button class="text-uppercase buttonPaint">Añadir al carrito</button>
+          <button class="item-button btn btn-primary addToCart">Añadir al carrito</button>
         </div>
       </div>
     </div>
@@ -137,30 +137,18 @@ const Paint = () => {
 <br/>
 
 
-<div class="row">
-  <div class="col-md-3">
-    <div class="card">
-      <div class="card-body">
-      <div class="product-2 align-items-center p-2 text-center">
-      <img src={artIcon} alt="" class="rounded" width="220"/>
-      <h5>Titulo</h5>
-      <div class="mt-3 info">
-        <span class="text-1 d-block">Descripción</span>
-        <span class="text-1 center">Text</span>
-      </div>  
-      <div class="cost mt-3 text-dark">
-      <span class="color"><FaStar/><FaStar/><FaStarHalfAlt/><FaRegStar/><FaRegStar/></span>
-        <br/>
-        <span>$0.00</span>
-        <div class="p-3 art text-center text-dark mt-3 cursor">
-                <hr/>
-         <button class="text-uppercase buttonPaint">Añadir al carrito</button>
-        </div>
-      </div>
-    </div>
-  </div>
- </div> 
-</div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="item shadow mb-4">
+                            <h3 class="item-title">Pokemon Oro</h3>
+
+                            <img class="item-image" img src={artIcon} alt=""  width="220"/>
+                            <div class="item-details">
+                                <h4 class="item-price">19.99€</h4>
+                                <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
+                            </div>
+                        </div>
+                    </div>
 
  <div class="col-md-3">
     <div class="card">
@@ -436,6 +424,17 @@ const Paint = () => {
 </div>
 <br/>
 <Footer/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <script src="./tienda.js"></script>
     </>
   );
 };
