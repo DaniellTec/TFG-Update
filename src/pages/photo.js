@@ -6,6 +6,8 @@ import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
 import Footer from '../components/footer';
 
+import image1 from '../images/home/7.jpg';
+
 const Photo = () => {
   return (
     <> 
@@ -45,8 +47,9 @@ const Photo = () => {
     <div class="card">
       <div class="card-body">
       <div class="product-2 align-items-center p-2 text-center">
-      <img src={artIcon} alt="" class="rounded" width="220"/>
-      <h5>Titulo</h5>
+      <img   src={image1} alt="" class="rounded" width="220"/>
+      <h5>
+      <button>Titulo</button></h5>
       <div class="mt-3 info">
         <span class="text-1 d-block">Descripción</span>
         <span class="text-1 center">Text</span>
