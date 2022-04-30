@@ -1,0 +1,73 @@
+[
+    {
+      "title": "Blacksad",
+      "dimensions": "521 x 700",
+      "author": "Juanjo Guarnido",
+      "category":["Oil"],
+      "price": 1100,
+      "image":"https://i.ibb.co/fGf8SKd/1.jpg"
+    },
+    {
+      "title": "Face",
+      "dimensions": "521 x 700",
+      "author": "José Villaseñor",
+      "category":["Abstract", "Portait"],
+      "price": 700,
+      "image":
+        "https://i.ibb.co/9NxYz1V/2.jpg"
+    },
+    {
+      "title": "Dog",
+      "dimensions": "521 x 700",
+      "author": "Michelle Williamson",
+      "category":["Oil", "portrait"],
+      "price": 750,
+      "image":
+        "https://i.ibb.co/KFn8TBJ/16.jpg"
+    },
+    {
+      "title": "Red lips",
+      "dimensions": "521 x 700",
+      "author": "Manuel Bustamante",
+      "category":["Portrait", ""],
+      "price": 1500,
+      "image": "https://i.ibb.co/nRFgvCf/14.webp"
+    },
+    {
+      "title": "Autumm",
+      "dimensions": "521 x 700",
+      "author": "Leonid Afrenov",
+      "category":["Landscape", ""],
+      "price": 800,
+      "image":
+        "https://i.ibb.co/cktm4DL/17.jpg"
+    },
+    {
+      "title": "Refuse to change",
+      "dimensions": "521 x 700",
+      "author": "Pangborn",
+      "category":["Oil", ""],
+      "price": 900,
+      "image":
+        "https://i.ibb.co/x5fXJHY/19.jpg"
+    },
+    {
+      "title": "Wind",
+      "dimensions": "521 x 700",
+      "author": "Wild Imperfectrose",
+      "category":["Portrait", "oil"],
+      "price": 650,
+      "image":
+        "https://i.ibb.co/BzrFcX1/13-1.jpg"
+    },
+    {
+      "title": "Rain",
+      "dimensions": "521 x 700",
+      "author": "Leonid Afrenov",
+      "category":["Oil", ""],
+      "price": 750,
+      "image":
+        "https://i.ibb.co/6yV10Zn/18.jpg"
+    }
+  ]
+

@@ -62,7 +62,7 @@ const Home = () => {
  <div class="col-md-3">
       <div class="card-body">
       <div class="product-2 align-items-center p-2 text-center">
-      <img src={face} alt="" class="rounded center"/>
+      <img src={face} alt="" class="rounded img-fluid"/>
       <h5>Face - José Villaseñor</h5>
     </div>
  </div> 
@@ -70,7 +70,7 @@ const Home = () => {
 <div class="col-md-3">
       <div class="card-body">
       <div class="product-2 align-items-center p-2 text-center">
-      <img src={lake} alt="" class="rounded img-fluid" />
+      <img src={lake} alt="" class="rounded img-fluid" width="240" />
       <h5>Lake - Den Belitsky</h5>
     </div>
  </div> 
@@ -79,7 +79,7 @@ const Home = () => {
  <div class="col-md-3">
       <div class="card-body">
       <div class="product-2 align-items-center p-2 text-center">
-      <img src={mountain} alt="" class="rounded center" />
+      <img src={mountain} alt="" class="rounded img-fluid" width="270" />
       <h5>Mountain - Unknown</h5>
     </div>
  </div> 
@@ -96,8 +96,6 @@ const Home = () => {
 
 
 <Component/>
-    
-
 
 <Footer/>
     </>

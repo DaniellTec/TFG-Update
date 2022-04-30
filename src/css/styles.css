@@ -58,7 +58,7 @@ text-align: center;
 }
 
 .footer{
-position:absolute;
+position:bottom;
 left:0;
 bottom:0;
 right:0;
@@ -113,14 +113,58 @@ a:hover {
     height: auto;
   }
 
-.box{
+.boxPaint{
     background-color: white;
-    width: 200px;
-    border: 2px solid black;
-    border-radius: 6px;
-    padding: 3px;
-    margin: 5px;
+    display: inline-flex; 
+    text-align: center;
+    border: 1px solid rgb(224, 224, 224) ;
+    border-radius: 10px;
+    margin: 7px;
+    width: 300px;
+    height: 500px;
+
 }
+
+.boxPhoto{
+  background-color: white;
+  display: inline-flex; 
+  text-align: center;
+  border: 1px solid rgb(224, 224, 224) ;
+  border-radius: 10px;
+  margin: 7px;
+  width: 300px;
+  height: 500px;
+
+}
+
+.boxMuseum{
+  background-color: white;
+  display: inline-flex; 
+  text-align: center;
+  border: 1px solid rgb(224, 224, 224) ;
+  border-radius: 10px;
+  margin: 7px;
+  width: 300px;
+  height: 500px;
+
+}
+
+.card{
+  background-color: white;
+  width: 300px;
+  margin: 5px;
+  display: inline-flex; 
+  text-align: center;
+  border: 0.5px solid grey;
+  border-radius: 50px;
+
+}
+
+.imageProduct{
+ justify-content: center;
+ margin: 9px;
+}
+
 /**/
 .imageProductButton{
     background-color: Transparent;

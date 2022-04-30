@@ -1,0 +1,64 @@
+[
+    {
+      "title": "Tunnel",
+      "dimensions": "521 x 700",
+      "category":["Modern"],
+      "price": 600,
+      "image":"https://i.ibb.co/cYRm6yz/3.jpg"
+    },
+    {
+      "title": "Lake",
+      "dimensions": "521 x 700",
+      "category":["Landscape"],
+      "price": 550,
+      "image":
+        "https://i.ibb.co/zbTs0rQ/11.jpg"
+    },
+    {
+      "title": "Old city",
+      "dimensions": "521 x 700",
+      "category":["Cities", "Modern"],
+      "price": 785,
+      "image":
+        "https://i.ibb.co/X49949H/21.jpg"
+    },
+    {
+      "title": "Fountain",
+      "dimensions": "521 x 700",
+      "category":["Landscape", ""],
+      "price": 655,
+      "image": "https://i.ibb.co/mcT1zvQ/24.jpg"
+    },
+    {
+      "title": "City Night",
+      "dimensions": "521 x 700",
+      "category":["Landscape", ""],
+      "price": 805,
+      "image":
+        "https://i.ibb.co/gjmwyqv/22.jpg"
+    },
+    {
+      "title": "City Moonlight",
+      "category":["Cities", "Modern"],
+      "price": 955,
+      "image":
+        "https://i.ibb.co/MGSBrwS/23.jpg"
+    },
+    {
+      "title": "Mountain Lake",
+      "dimensions": "521 x 700",
+      "category":["Cities", "Modern"],
+      "price": 810,
+      "image":
+        "https://i.ibb.co/ZKD88Xf/25.jpg"
+    },
+    {
+      "title": "Japan Village",
+      "dimensions": "521 x 700",
+      "category":["Landscape", "Cities"],
+      "price": 775,
+      "image":
+        "https://i.ibb.co/Sx1nYjD/26.jpg"
+    }
+  ]
+

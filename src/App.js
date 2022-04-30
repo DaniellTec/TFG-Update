@@ -6,13 +6,13 @@ import CookieConsent from "react-cookie-consent";
 import Swal from 'sweetalert2';
 
 import Home from "./pages/home";
-import Paint from "./pages/paint";
+import Paint from "./pages/paintt";
 import Abstract from "./pages/abstract";
 import Oil from "./pages/oil";
 
-import Photo from "./pages/photo";
+import Photoo from "./pages/photoo";
 
-import Museum from "./pages/museum";
+import Museum from "./pages/museumm";
 import Login from './pages/login';
 import Sign from './pages/sign';
 
@@ -25,7 +25,7 @@ function App() {
                 <Route path="/home" exact>
                     <Home/>
                 </Route>
-                <Route path="/paint">
+                <Route path="/paintt">
                     <Paint/>
                 </Route>
                 <Route path="/abstract">
@@ -34,10 +34,10 @@ function App() {
                 <Route path="/oil">
                     <Oil/>
                 </Route>
-                <Route path="/photo">
-                    <Photo/>
+                <Route path="/photoo">
+                    <Photoo/>
                 </Route>
-                <Route path="/museum">
+                <Route path="/museumm">
                     <Museum/>
                 </Route>
                 <Route path="/login">
