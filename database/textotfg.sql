@@ -23,48 +23,61 @@ USE `arte` ;
 -- Table `arte`.`pinturas`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `arte`.`pinturas` (
-  `id` INT NOT NULL,
-  `nombre` VARCHAR(45) NOT NULL,
-  `autor` VARCHAR(45) NULL,
-  `descripcion` VARCHAR(245) NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `title` VARCHAR(200) NOT NULL,
+  `dimensions` VARCHAR(45) NOT NULL,
+  `author` VARCHAR(45) NULL,
+  `category` VARCHAR(45) NOT NULL,
   `precio` INT NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
+
+
+-- ------------------------------------------------------
+-- Insert 'arte'.'pinturas'
+-- ------------------------------------------------------
+-- insert into  pinturas (id, title, dimensions, author, category,precio) values (1,"Blacksad","521 x 700","Juanjo_Guarnido","Oil",1100);
+-- insert into  pinturas (id, title, dimensions, author, category,precio) values(2,"Face","521 x 700","José_Villaseñor","Abstract",700);
+-- insert into  pinturas (id, title, dimensions, author, category,precio) values(3,"Dog","521 x 700","Michelle_Williamson","Oil",750);
+-- insert into  pinturas (id, title, dimensions, author, category,precio) values(4,"Red_lips","521 x 700","Manuel_Bustamante","Oil",1500);
+-- insert into  pinturas (id, title, dimensions, author, category,precio) values(5,"Autumm","521 x 700","Leonid_Afrenov","Oil",800);
+-- insert into  pinturas (id, title, dimensions, author, category,precio) values(6,"Refuse_to_change","521 x 700","Pangborn","Oil",900);
+-- insert into  pinturas (id, title, dimensions, author, category,precio) values(7,"Wind","521 x 700","Wild Imperfectrose","Oil",650);
+-- insert into  pinturas (id, title, dimensions, author, category,precio) values(8,"Rain","521 x 700","Leonid_Afrenov","Oil",750);
+
 
 
 -- -----------------------------------------------------
 -- Table `arte`.`fotografias`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `arte`.`fotografias` (
-  `id` INT NOT NULL,
-  `nombre` VARCHAR(45) NOT NULL,
-  `autor` VARCHAR(45) NULL,
-  `descripcion` VARCHAR(245) NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(45) NOT NULL,
+  `dimensions` VARCHAR(45) NOT NULL,
+  `category` VARCHAR(45) NOT NULL,
   `precio` INT NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
-
--- -----------------------------------------------------
--- Table `arte`.`fotografias`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `arte`.`fotografias` (
-  `id` INT NOT NULL,
-  `nombre` VARCHAR(45) NOT NULL,
-  `autor` VARCHAR(45) NULL,
-  `descripcion` VARCHAR(245) NOT NULL,
-  `precio` INT NOT NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
+-- ------------------------------------------------------
+-- Insert 'arte'.'fotografias'
+-- ------------------------------------------------------
+-- insert into  fotografias (id, title, dimensions, category, precio) values (1,"Tunnel","521 x 700","Modern",1100);
+-- insert into  fotografias (id, title, dimensions, category, precio) values(2,"Lake","521 x 700","Landscape",700);
+-- insert into  fotografias (id, title, dimensions, category, precio) values(3,"Old city","521 x 700","Cities",750);
+-- insert into  fotografias (id, title, dimensions, category, precio) values(4,"Fountain","521 x 700","Landscape",1500);
+-- insert into  fotografias (id, title, dimensions, category, precio) values(5,"City Night","521 x 700","Landscape",800);
+-- insert into  fotografias (id, title, dimensions, category, precio) values(6,"City Moonlight","521 x 700","Modern",900);
+-- insert into  fotografias (id, title, dimensions, category, precio) values(7,"Mountain Lake","521 x 700","Cities",650);
+-- insert into  fotografias (id, title, dimensions, category,precio) values(8,"Japan Village","521 x 700","Landscape",750);
 
 
 -- -----------------------------------------------------
 -- Table `arte`.`museos`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `arte`.`museos` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NOT NULL,
-  `descripcion` VARCHAR(245) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -73,9 +86,8 @@ ENGINE = InnoDB;
 -- Table `arte`.`entradas`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `arte`.`entradas` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NOT NULL,
-  `descripcion` VARCHAR(245) NOT NULL,
   `precio` INT NOT NULL,
   `museos_id` INT NOT NULL,
   `museos_id1` INT NOT NULL,
@@ -93,9 +105,8 @@ ENGINE = InnoDB;
 -- Table `arte`.`opiniones`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `arte`.`opiniones` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NOT NULL,
-  `descripcion` VARCHAR(245) NOT NULL,
   `museos_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_opiniones_museos1_idx` (`museos_id` ASC) VISIBLE,
@@ -111,7 +122,7 @@ ENGINE = InnoDB;
 -- Table `arte`.`users`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `arte`.`users` (
-  `idusers` BIGINT(40) NOT NULL,
+  `idusers` BIGINT(40) NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
   `email` VARCHAR(225) NOT NULL,
   `email_verified_at` TIMESTAMP(6) NULL,
@@ -127,7 +138,7 @@ ENGINE = InnoDB;
 -- Table `arte`.`address`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `arte`.`address` (
-  `idaddress` SMALLINT(20) NOT NULL,
+  `idaddress` SMALLINT(20) NOT NULL AUTO_INCREMENT,
   `address` VARCHAR(45) NOT NULL,
   `address2` VARCHAR(20) NOT NULL,
   `postalCode` VARCHAR(45) NULL,
@@ -142,7 +153,7 @@ ENGINE = InnoDB;
 -- Table `arte`.`customers`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `arte`.`customers` (
-  `idCustomers` INT NOT NULL,
+  `idCustomers` INT NOT NULL AUTO_INCREMENT,
   `firstName` VARCHAR(45) NOT NULL,
   `lastName` VARCHAR(45) NOT NULL,
   `createDate` DATETIME(6) NOT NULL,
@@ -168,7 +179,7 @@ ENGINE = InnoDB;
 -- Table `arte`.`payments`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `arte`.`payments` (
-  `idpayments` INT NOT NULL,
+  `idpayments` INT NOT NULL AUTO_INCREMENT,
   `amount` DECIMAL(5,2) NOT NULL,
   `paymentDate` DATETIME NOT NULL,
   `lastUpdate` TIMESTAMP(6) NOT NULL,
@@ -182,7 +193,7 @@ ENGINE = InnoDB;
 -- Table `arte`.`bill`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `arte`.`bill` (
-  `idbill` INT NOT NULL,
+  `idbill` INT NOT NULL AUTO_INCREMENT,
   `billDate` TIMESTAMP(6) NOT NULL,
   `bilValidate` TINYINT(55) NOT NULL,
   `billToken` INT(55) NOT NULL,
@@ -211,7 +222,7 @@ ENGINE = InnoDB;
 -- Table `arte`.`purchasedHistory`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `arte`.`purchasedHistory` (
-  `idpurchasedHistory` INT NOT NULL,
+  `idpurchasedHistory` INT NOT NULL AUTO_INCREMENT,
   `lastUpdate` TIMESTAMP(6) NOT NULL,
   `bill_idbill` INT NOT NULL,
   `pinturas_id` INT NOT NULL,
@@ -250,7 +261,7 @@ ENGINE = InnoDB;
 -- Table `arte`.`paymentsmethods`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `arte`.`paymentsmethods` (
-  `idpaymentsmethods` INT NOT NULL,
+  `idpaymentsmethods` INT NOT NULL AUTO_INCREMENT,
   `purchasedHistory_idpurchasedHistory` INT NOT NULL,
   PRIMARY KEY (`idpaymentsmethods`),
   INDEX `fk_paymentsmethods_purchasedHistory1_idx` (`purchasedHistory_idpurchasedHistory` ASC) VISIBLE,
@@ -266,7 +277,7 @@ ENGINE = InnoDB;
 -- Table `arte`.`migrations`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `arte`.`migrations` (
-  `idmigrations` INT NOT NULL,
+  `idmigrations` INT NOT NULL AUTO_INCREMENT,
   `migrations` VARCHAR(255) NOT NULL,
   `batch` INT NOT NULL,
   PRIMARY KEY (`idmigrations`))
@@ -277,7 +288,7 @@ ENGINE = InnoDB;
 -- Table `arte`.`passwordResets`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `arte`.`passwordResets` (
-  `email` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(255) NOT NULL ,
   `token` VARCHAR(255) NOT NULL,
   `created_at` TIMESTAMP(6) NULL)
 ENGINE = InnoDB;
@@ -287,7 +298,7 @@ ENGINE = InnoDB;
 -- Table `arte`.`creditCard`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `arte`.`creditCard` (
-  `idcreditCard` INT NOT NULL,
+  `idcreditCard` INT NOT NULL AUTO_INCREMENT,
   `creditCardNumber` BIGINT(55) NULL,
   `creditCardCcv` INT NULL,
   `creditCardExpireYear` VARCHAR(45) NULL,
@@ -302,13 +313,16 @@ ENGINE = InnoDB;
 -- Table `arte`.`dabirCard`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `arte`.`dabirCard` (
-  `iddabirCard` INT NOT NULL,
+  `iddabirCard` INT NOT NULL AUTO_INCREMENT,
   `dabirCardType` VARCHAR(45) NOT NULL,
   `dabirCardCcv` INT NOT NULL,
   `dabirCardExpireDate` VARCHAR(45) NOT NULL,
   `debitCardOwner` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`iddabirCard`))
 ENGINE = InnoDB;
+
+
+
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
