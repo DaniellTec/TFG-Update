@@ -101,17 +101,15 @@ class Museummtemplate extends React.Component {
     super(props);
   }
   render() {
-    const { title, author, category, price, image } = this.props.museum;
+    const { title, description, location, image } = this.props.museum;
     return (
 <>
 <div className="boxMuseum">
        <div>
         <img src={image} width="275" className="imageProduct"/>
           <p>{title}</p>
-          <p><a href="">{author}</a></p>
           <div className="price">
-            <i className="fa fa-heart" />
-            <span>{price}</span>€<br/>
+            <span>{location}</span><br/>
           </div>
       </div>
       </div>
