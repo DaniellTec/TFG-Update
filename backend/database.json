@@ -1,44 +1,201 @@
-{
-  "products": [
-    {
-      "id": 1,
-      "name": "laptop",
-      "price": 1599.99,
-      "description": "HP Laptop",
-      "categoryId": 1
+{ 
+  "paintingsData": [
+  {
+    "title": "Blacksad",
+    "dimensions": "521 x 700",
+    "author": "Juanjo Guarnido",
+    "category":["Oil"],
+    "price": 1100,
+    "image":"https://i.ibb.co/fGf8SKd/1.jpg"
+  },
+  {
+    "title": "Face",
+    "dimensions": "521 x 700",
+    "author": "José Villaseñor",
+    "category":["Abstract", "Portait"],
+    "price": 700,
+    "image":
+      "https://i.ibb.co/9NxYz1V/2.jpg"
+  },
+  {
+    "title": "Dog",
+    "dimensions": "521 x 700",
+    "author": "Michelle Williamson",
+    "category":["Oil", "portrait"],
+    "price": 750,
+    "image":
+      "https://i.ibb.co/KFn8TBJ/16.jpg"
+  },
+  {
+    "title": "Red lips",
+    "dimensions": "521 x 700",
+    "author": "Manuel Bustamante",
+    "category":["Portrait", ""],
+    "price": 1500,
+    "image": "https://i.ibb.co/nRFgvCf/14.webp"
+  },
+  {
+    "title": "Autumm",
+    "dimensions": "521 x 700",
+    "author": "Leonid Afrenov",
+    "category":["Landscape", ""],
+    "price": 800,
+    "image":
+      "https://i.ibb.co/cktm4DL/17.jpg"
+  },
+  {
+    "title": "Refuse to change",
+    "dimensions": "521 x 700",
+    "author": "Pangborn",
+    "category":["Oil", ""],
+    "price": 900,
+    "image":
+      "https://i.ibb.co/x5fXJHY/19.jpg"
+  },
+  {
+    "title": "Wind",
+    "dimensions": "521 x 700",
+    "author": "Wild Imperfectrose",
+    "category":["Portrait", "oil"],
+    "price": 650,
+    "image":
+      "https://i.ibb.co/BzrFcX1/13-1.jpg"
+  },
+  {
+    "title": "Rain",
+    "dimensions": "521 x 700",
+    "author": "Leonid Afrenov",
+    "category":["Oil", ""],
+    "price": 750,
+    "image":
+      "https://i.ibb.co/6yV10Zn/18.jpg"
+  }
+],
+
+"photosData": [
+  {
+      "title": "Tunnel",
+      "dimensions": "521 x 700",
+      "category":["Modern"],
+      "price": 600,
+      "image":"https://i.ibb.co/cYRm6yz/3.jpg"
     },
     {
-      "id": 2,
-      "name": "monitor",
-      "price": 199.99,
-      "description": "Monitor LCD LG",
-      "categoryId": 1
+      "title": "Lake",
+      "dimensions": "521 x 700",
+      "category":["Landscape"],
+      "price": 550,
+      "image":
+        "https://i.ibb.co/zbTs0rQ/11.jpg"
     },
     {
-      "id": 3,
-      "name": "mouse",
-      "price": 20,
-      "description": "Razer Gaming Mouse",
-      "categoryId": 2
+      "title": "Old city",
+      "dimensions": "521 x 700",
+      "category":["Cities", "Modern"],
+      "price": 785,
+      "image":
+        "https://i.ibb.co/X49949H/21.jpg"
     },
     {
-      "name": "keyboard",
-      "price": "399.00",
-      "description": "gaming keyboard",
-      "categoryId": 2,
-      "id": 4
+      "title": "Fountain",
+      "dimensions": "521 x 700",
+      "category":["Landscape", ""],
+      "price": 655,
+      "image": "https://i.ibb.co/mcT1zvQ/24.jpg"
+    },
+    {
+      "title": "City Night",
+      "dimensions": "521 x 700",
+      "category":["Landscape", ""],
+      "price": 805,
+      "image":
+        "https://i.ibb.co/gjmwyqv/22.jpg"
+    },
+    {
+      "title": "City Moonlight",
+      "category":["Cities", "Modern"],
+      "price": 955,
+      "image":
+        "https://i.ibb.co/MGSBrwS/23.jpg"
+    },
+    {
+      "title": "Mountain Lake",
+      "dimensions": "521 x 700",
+      "category":["Cities", "Modern"],
+      "price": 810,
+      "image":
+        "https://i.ibb.co/ZKD88Xf/25.jpg"
+    },
+    {
+      "title": "Japan Village",
+      "dimensions": "521 x 700",
+      "category":["Landscape", "Cities"],
+      "price": 775,
+      "image":
+        "https://i.ibb.co/Sx1nYjD/26.jpg"
     }
-  ],
-  "categories": [
-    {
-      "id": "1",
-      "name": "computers",
-      "description": "computers, laptops, monitors, etc"
+],
+"museumData": [
+  {
+      "title": "Tunnel",
+      "dimensions": "521 x 700",
+      "category":["Modern"],
+      "price": 600,
+      "image":"https://i.ibb.co/cYRm6yz/3.jpg"
     },
     {
-      "id": "2",
-      "name": "gaming",
-      "description": "mouse, monitors, keyboards etc"
+      "title": "Lake",
+      "dimensions": "521 x 700",
+      "category":["Landscape"],
+      "price": 550,
+      "image":
+        "https://i.ibb.co/zbTs0rQ/11.jpg"
+    },
+    {
+      "title": "Old city",
+      "dimensions": "521 x 700",
+      "category":["Cities", "Modern"],
+      "price": 785,
+      "image":
+        "https://i.ibb.co/X49949H/21.jpg"
+    },
+    {
+      "title": "Fountain",
+      "dimensions": "521 x 700",
+      "category":["Landscape", ""],
+      "price": 655,
+      "image": "https://i.ibb.co/mcT1zvQ/24.jpg"
+    },
+    {
+      "title": "City Night",
+      "dimensions": "521 x 700",
+      "category":["Landscape", ""],
+      "price": 805,
+      "image":
+        "https://i.ibb.co/gjmwyqv/22.jpg"
+    },
+    {
+      "title": "City Moonlight",
+      "category":["Cities", "Modern"],
+      "price": 955,
+      "image":
+        "https://i.ibb.co/MGSBrwS/23.jpg"
+    },
+    {
+      "title": "Mountain Lake",
+      "dimensions": "521 x 700",
+      "category":["Cities", "Modern"],
+      "price": 810,
+      "image":
+        "https://i.ibb.co/ZKD88Xf/25.jpg"
+    },
+    {
+      "title": "Japan Village",
+      "dimensions": "521 x 700",
+      "category":["Landscape", "Cities"],
+      "price": 775,
+      "image":
+        "https://i.ibb.co/Sx1nYjD/26.jpg"
     }
-  ]
+]
 }
