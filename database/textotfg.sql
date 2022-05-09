@@ -77,9 +77,22 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `arte`.`museos` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `nombre` VARCHAR(45) NOT NULL,
+  `nombre` VARCHAR(200) NOT NULL,
+  `location` VARCHAR(200) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
+
+-- ------------------------------------------------------
+-- Insert 'arte'.'museos'
+-- ------------------------------------------------------
+-- insert into  museos (id, nombre, location) values (1,"Museo del Prado","C. de Ruiz de Alarcón, 23, 28014 Madrid");
+-- insert into  museos (id, nombre, location) values(2,"Museo Reina Sofía","C. de Sta. Isabel, 52, 28012 Madrid");
+-- insert into  museos (id, nombre, location) values(3,"Museo Nacional de Artes Decorativas","P.º del Prado, 8, 28014 Madrid");
+-- insert into  museos (id, nombre, location) values(4,"Museo Thyssen Bornemisza","Manuel Bustamante");
+-- insert into  museos (id, nombre, location) values(5,"Museo Sorolla","P.º del Gral. Martínez Campos, 37, 28010 Madrid");
+-- insert into  museos (id, nombre, location) values(6,"Museo arqueológico nacional","Calle de Serrano, 13, 28001 Madrid");
+-- insert into  museos (id, nombre, location) values(7,"Museo Cerralbo","C. de Ventura Rodríguez, 17, 28008 Madrid");
+-- insert into  museos (id, nombre, location) values(8,"Museo Lázaro Galdiano","C. Serrano, 122, 28006 Madrid");
 
 
 -- -----------------------------------------------------
