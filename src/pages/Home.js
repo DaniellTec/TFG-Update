@@ -70,7 +70,7 @@ const Home = () => {
 <div class="col-md-3">
       <div class="card-body">
       <div class="product-2 align-items-center p-2 text-center">
-      <img src={lake} alt="" class="rounded img-fluid" width="240" />
+      <img src={lake} alt="" class="rounded img-fluid" width="280" />
       <h5>Lake - Den Belitsky</h5>
     </div>
  </div> 
