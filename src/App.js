@@ -22,7 +22,7 @@ function App() {
     return (
         <Layout>
             <Switch>
-                <Route path="/home" exact>
+                <Route path="/" exact>
                     <Home/>
                 </Route>
                 <Route path="/paintt">

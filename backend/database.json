@@ -1,201 +1,258 @@
-{ 
+{
   "paintingsData": [
-  {
-    "title": "Blacksad",
-    "dimensions": "521 x 700",
-    "author": "Juanjo Guarnido",
-    "category":["Oil"],
-    "price": 1100,
-    "image":"https://i.ibb.co/fGf8SKd/1.jpg"
-  },
-  {
-    "title": "Face",
-    "dimensions": "521 x 700",
-    "author": "José Villaseñor",
-    "category":["Abstract", "Portait"],
-    "price": 700,
-    "image":
-      "https://i.ibb.co/9NxYz1V/2.jpg"
-  },
-  {
-    "title": "Dog",
-    "dimensions": "521 x 700",
-    "author": "Michelle Williamson",
-    "category":["Oil", "portrait"],
-    "price": 750,
-    "image":
-      "https://i.ibb.co/KFn8TBJ/16.jpg"
-  },
-  {
-    "title": "Red lips",
-    "dimensions": "521 x 700",
-    "author": "Manuel Bustamante",
-    "category":["Portrait", ""],
-    "price": 1500,
-    "image": "https://i.ibb.co/nRFgvCf/14.webp"
-  },
-  {
-    "title": "Autumm",
-    "dimensions": "521 x 700",
-    "author": "Leonid Afrenov",
-    "category":["Landscape", ""],
-    "price": 800,
-    "image":
-      "https://i.ibb.co/cktm4DL/17.jpg"
-  },
-  {
-    "title": "Refuse to change",
-    "dimensions": "521 x 700",
-    "author": "Pangborn",
-    "category":["Oil", ""],
-    "price": 900,
-    "image":
-      "https://i.ibb.co/x5fXJHY/19.jpg"
-  },
-  {
-    "title": "Wind",
-    "dimensions": "521 x 700",
-    "author": "Wild Imperfectrose",
-    "category":["Portrait", "oil"],
-    "price": 650,
-    "image":
-      "https://i.ibb.co/BzrFcX1/13-1.jpg"
-  },
-  {
-    "title": "Rain",
-    "dimensions": "521 x 700",
-    "author": "Leonid Afrenov",
-    "category":["Oil", ""],
-    "price": 750,
-    "image":
-      "https://i.ibb.co/6yV10Zn/18.jpg"
-  }
-],
-
-"photosData": [
-  {
+    {
+      "id": 1,
+      "title": "Blacksad",
+      "dimensions": "521 x 700",
+      "author": "Juanjo Guarnido",
+      "category": [
+        "Oil"
+      ],
+      "price": 1100,
+      "image": "https://i.ibb.co/fGf8SKd/1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Face",
+      "dimensions": "521 x 700",
+      "author": "José Villaseñor",
+      "category": [
+        "Abstract",
+        "Portait"
+      ],
+      "price": 700,
+      "image": "https://i.ibb.co/9NxYz1V/2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Dog",
+      "dimensions": "521 x 700",
+      "author": "Michelle Williamson",
+      "category": [
+        "Oil",
+        "portrait"
+      ],
+      "price": 750,
+      "image": "https://i.ibb.co/KFn8TBJ/16.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Red lips",
+      "dimensions": "521 x 700",
+      "author": "Manuel Bustamante",
+      "category": [
+        "Portrait",
+        ""
+      ],
+      "price": 1500,
+      "image": "https://i.ibb.co/nRFgvCf/14.webp"
+    },
+    {
+      "id": 5,
+      "title": "Autumm",
+      "dimensions": "521 x 700",
+      "author": "Leonid Afrenov",
+      "category": [
+        "Landscape",
+        ""
+      ],
+      "price": 800,
+      "image": "https://i.ibb.co/cktm4DL/17.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Refuse to change",
+      "dimensions": "521 x 700",
+      "author": "Pangborn",
+      "category": [
+        "Oil",
+        ""
+      ],
+      "price": 900,
+      "image": "https://i.ibb.co/x5fXJHY/19.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Wind",
+      "dimensions": "521 x 700",
+      "author": "Wild Imperfectrose",
+      "category": [
+        "Portrait",
+        "oil"
+      ],
+      "price": 650,
+      "image": "https://i.ibb.co/BzrFcX1/13-1.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Rain",
+      "dimensions": "521 x 700",
+      "author": "Leonid Afrenov",
+      "category": [
+        "Oil",
+        ""
+      ],
+      "price": 750,
+      "image": "https://i.ibb.co/6yV10Zn/18.jpg"
+    }
+  ],
+  "photosData": [
+    {
       "title": "Tunnel",
       "dimensions": "521 x 700",
-      "category":["Modern"],
+      "category": [
+        "Modern"
+      ],
       "price": 600,
-      "image":"https://i.ibb.co/cYRm6yz/3.jpg"
+      "image": "https://i.ibb.co/cYRm6yz/3.jpg"
     },
     {
       "title": "Lake",
       "dimensions": "521 x 700",
-      "category":["Landscape"],
+      "category": [
+        "Landscape"
+      ],
       "price": 550,
-      "image":
-        "https://i.ibb.co/zbTs0rQ/11.jpg"
+      "image": "https://i.ibb.co/zbTs0rQ/11.jpg"
     },
     {
       "title": "Old city",
       "dimensions": "521 x 700",
-      "category":["Cities", "Modern"],
+      "category": [
+        "Cities",
+        "Modern"
+      ],
       "price": 785,
-      "image":
-        "https://i.ibb.co/X49949H/21.jpg"
+      "image": "https://i.ibb.co/X49949H/21.jpg"
     },
     {
       "title": "Fountain",
       "dimensions": "521 x 700",
-      "category":["Landscape", ""],
+      "category": [
+        "Landscape",
+        ""
+      ],
       "price": 655,
       "image": "https://i.ibb.co/mcT1zvQ/24.jpg"
     },
     {
       "title": "City Night",
       "dimensions": "521 x 700",
-      "category":["Landscape", ""],
+      "category": [
+        "Landscape",
+        ""
+      ],
       "price": 805,
-      "image":
-        "https://i.ibb.co/gjmwyqv/22.jpg"
+      "image": "https://i.ibb.co/gjmwyqv/22.jpg"
     },
     {
       "title": "City Moonlight",
-      "category":["Cities", "Modern"],
+      "category": [
+        "Cities",
+        "Modern"
+      ],
       "price": 955,
-      "image":
-        "https://i.ibb.co/MGSBrwS/23.jpg"
+      "image": "https://i.ibb.co/MGSBrwS/23.jpg"
     },
     {
       "title": "Mountain Lake",
       "dimensions": "521 x 700",
-      "category":["Cities", "Modern"],
+      "category": [
+        "Cities",
+        "Modern"
+      ],
       "price": 810,
-      "image":
-        "https://i.ibb.co/ZKD88Xf/25.jpg"
+      "image": "https://i.ibb.co/ZKD88Xf/25.jpg"
     },
     {
       "title": "Japan Village",
       "dimensions": "521 x 700",
-      "category":["Landscape", "Cities"],
+      "category": [
+        "Landscape",
+        "Cities"
+      ],
       "price": 775,
-      "image":
-        "https://i.ibb.co/Sx1nYjD/26.jpg"
+      "image": "https://i.ibb.co/Sx1nYjD/26.jpg"
     }
-],
-"museumData": [
-  {
-      "title": "Tunnel",
-      "dimensions": "521 x 700",
-      "category":["Modern"],
-      "price": 600,
-      "image":"https://i.ibb.co/cYRm6yz/3.jpg"
+  ],
+  "museumData": [
+    {
+      "title": "Museo del Prado",
+      "description": "Amplia representación de obras Velázquez, Goya, Tiziano y Rubens en este museo con horario de entrada gratis y guías del museo para descargar gratis",
+      "location": "C. de Ruiz de Alarcón, 23, 28014 Madrid",
+      "image": "https://i.ibb.co/rHLyFDZ/prado.jpg"
     },
     {
-      "title": "Lake",
-      "dimensions": "521 x 700",
-      "category":["Landscape"],
-      "price": 550,
-      "image":
-        "https://i.ibb.co/zbTs0rQ/11.jpg"
+      "title": "Museo Reina Sofía",
+      "description": "El Museo Nacional Centro de Arte Reina Sofía centrado en arte contemporaneo con obras de grandes artistas españoles del siglo XX",
+      "location": "C. de Sta. Isabel, 52, 28012 Madrid",
+      "image": "https://i.ibb.co/7NZ7Syj/reina.jpg"
     },
     {
-      "title": "Old city",
-      "dimensions": "521 x 700",
-      "category":["Cities", "Modern"],
-      "price": 785,
-      "image":
-        "https://i.ibb.co/X49949H/21.jpg"
+      "title": "Museo Nacional de Artes Decorativas",
+      "description": "Exposición de elementos de ornamentación de todo tipo: mobiliario, cristal, cerámica, alfombras, tapices, juguetes, etc. pertenecientes a los siglos XV al XIX, y objetos de las dinastías Ming y Qing.",
+      "location": "P.º del Prado, 8, 28014 Madrid",
+      "image": "https://i.ibb.co/4dxqngQ/decor.jpg"
     },
     {
-      "title": "Fountain",
-      "dimensions": "521 x 700",
-      "category":["Landscape", ""],
-      "price": 655,
-      "image": "https://i.ibb.co/mcT1zvQ/24.jpg"
+      "title": "Museo Thyssen Bornemisza",
+      "description": "Exposición de pinturas que van desde los primitivos flamencos o italianos hasta el siglo XX, destacando retratos del Renacimiento, Impresionismo, Expresionismo y del siglo XX",
+      "location": "Manuel Bustamante",
+      "image": "https://i.ibb.co/wJK1FYR/tyssen.jpg"
     },
     {
-      "title": "City Night",
-      "dimensions": "521 x 700",
-      "category":["Landscape", ""],
-      "price": 805,
-      "image":
-        "https://i.ibb.co/gjmwyqv/22.jpg"
+      "title": "Museo Sorolla",
+      "description": "El Museo Sorolla aspira a promover al máximo el conocimiento y disfrute del legado de Joaquín Sorolla por todo tipo de públicos, en el convencimiento de que este legado, y en particular las obras de Joaquín Sorolla, puede ofrecerles una experiencia emocional y estética positiva y enriquecedora, estimular sus sentidos, avivar en ellos la conciencia del sentido de la vista como instrumento de conocimiento y animarlos a utilizar sus propias capacidades creativas.",
+      "location": "P.º del Gral. Martínez Campos, 37, 28010 Madrid",
+      "image": "https://i.ibb.co/gztH7kh/sorrolla.jpg"
     },
     {
-      "title": "City Moonlight",
-      "category":["Cities", "Modern"],
-      "price": 955,
-      "image":
-        "https://i.ibb.co/MGSBrwS/23.jpg"
+      "title": "Museo arqueológico nacional",
+      "description": "El Museo Arqueológico Nacional es una institución pública cuyo objetivo es ofrecer a todos los ciudadanos una interpretación rigurosa, atractiva, interesante y crítica del significado de los objetos que pertenecieron a los distintos pueblos de la actual España y del ámbito mediterráneo, desde la Antigüedad hasta épocas recientes, de manera que el conocimiento",
+      "location": "Calle de Serrano, 13, 28001 Madrid",
+      "image": "https://i.ibb.co/nQXMFrK/arquer.jpg"
     },
     {
-      "title": "Mountain Lake",
-      "dimensions": "521 x 700",
-      "category":["Cities", "Modern"],
-      "price": 810,
-      "image":
-        "https://i.ibb.co/ZKD88Xf/25.jpg"
+      "title": "Museo Cerralbo",
+      "description": "Es uno de los museos más importantes de Madrid, aunque también de los más desconocidos. Está situado en lo que fue la casa-palacio del XVII Marqués de Cerralbo y su visita traslada al visitante a la forma de vida de una familia aristocrática de finales del siglo XIX.",
+      "location": "C. de Ventura Rodríguez, 17, 28008 Madrid",
+      "image": "https://i.ibb.co/R32VK8v/cerral.jpg"
     },
     {
-      "title": "Japan Village",
-      "dimensions": "521 x 700",
-      "category":["Landscape", "Cities"],
-      "price": 775,
-      "image":
-        "https://i.ibb.co/Sx1nYjD/26.jpg"
+      "title": "Museo Lázaro Galdiano",
+      "description": "El Museo Lázaro Galdiano, en Madrid, es un museo estatal de origen privado, que alberga una amplia y heterogénea colección, formada con interés enciclopédico hacia todas las artes y técnicas.",
+      "location": "C. Serrano, 122, 28006 Madrid",
+      "image": "https://i.ibb.co/WkBqcGC/lazaro.jpg"
     }
-]
+  ],
+  "usersData": [
+    {
+      "name": "Museo del Prado",
+      "rol": "Amplia representación de obras Velázquez, Goya, Tiziano y Rubens en este museo con horario de entrada gratis y guías del museo para descargar gratis",
+      "contact": "C. de Ruiz de Alarcón, 23, 28014 Madrid",
+      "image": "https://i.ibb.co/rHLyFDZ/prado.jpg",
+      "id": 1
+    },
+    {
+      "name": "Museo Reina Sofía",
+      "rol": "El Museo Nacional Centro de Arte Reina Sofía centrado en arte contemporaneo con obras de grandes artistas españoles del siglo XX",
+      "contact": "C. de Sta. Isabel, 52, 28012 Madrid",
+      "image": "https://i.ibb.co/7NZ7Syj/reina.jpg",
+      "id": 2
+    },
+    {
+      "name": "Museo dela Prado",
+      "rol": "Amplia representación de obras Velázquez, Goya, Tiziano y Rubens en este museo con horario de entrada gratis y guías del museo para descargar gratis",
+      "contact": "C. de Ruiz de Alarcón, 23, 28014 Madrid",
+      "image": "https://i.ibb.co/rHLyFDZ/prado.jpg",
+      "id": 3
+    },
+    {
+      "name": "Museo dela ffff",
+      "rol": "Amplia representación de obras Velázquez, Goya, Tiziano y Rubens en este museo con horario de entrada gratis y guías del museo para descargar gratis",
+      "contact": "C. de Ruiz de Alarcón, 23, 28014 Madrid",
+      "image": "https://i.ibb.co/rHLyFDZ/prado.jpg",
+      "id": 4
+    }
+  ]
 }
