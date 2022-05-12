@@ -6,6 +6,8 @@
     "@auth0/auth0-react": "^1.9.0",
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
     "@mui/icons-material": "^5.4.4",
     "@mui/material": "^5.4.4",
@@ -15,7 +17,11 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.27.2",
     "bootstrap": "^5.1.3",
+<<<<<<< HEAD
     "express": "^4.18.1",
+=======
+    "font-awesome": "^4.7.0",
+>>>>>>> 689ce857130b4103fa0f86251ddd27f794a8833d
     "next-images": "^1.8.4",
     "node-sass": "^6.0.1",
     "react": "^17.0.2",
@@ -31,6 +37,7 @@
     "react-scripts": "4.0.3",
     "react-slick": "^0.29.0",
     "react-super-responsive-table": "^5.2.0",
+    "reactstrap": "^9.0.2",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.3",
     "sweetalert2": "^11.4.4",

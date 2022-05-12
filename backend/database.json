@@ -1,6 +1,10 @@
 {
   "paintingsData": [
     {
+<<<<<<< HEAD
+=======
+      "id": 1,
+>>>>>>> 689ce857130b4103fa0f86251ddd27f794a8833d
       "title": "Blacksad",
       "dimensions": "521 x 700",
       "author": "Juanjo Guarnido",
@@ -11,6 +15,10 @@
       "image": "https://i.ibb.co/fGf8SKd/1.jpg"
     },
     {
+<<<<<<< HEAD
+=======
+      "id": 2,
+>>>>>>> 689ce857130b4103fa0f86251ddd27f794a8833d
       "title": "Face",
       "dimensions": "521 x 700",
       "author": "José Villaseñor",
@@ -22,6 +30,10 @@
       "image": "https://i.ibb.co/9NxYz1V/2.jpg"
     },
     {
+<<<<<<< HEAD
+=======
+      "id": 3,
+>>>>>>> 689ce857130b4103fa0f86251ddd27f794a8833d
       "title": "Dog",
       "dimensions": "521 x 700",
       "author": "Michelle Williamson",
@@ -33,6 +45,10 @@
       "image": "https://i.ibb.co/KFn8TBJ/16.jpg"
     },
     {
+<<<<<<< HEAD
+=======
+      "id": 4,
+>>>>>>> 689ce857130b4103fa0f86251ddd27f794a8833d
       "title": "Red lips",
       "dimensions": "521 x 700",
       "author": "Manuel Bustamante",
@@ -44,6 +60,10 @@
       "image": "https://i.ibb.co/nRFgvCf/14.webp"
     },
     {
+<<<<<<< HEAD
+=======
+      "id": 5,
+>>>>>>> 689ce857130b4103fa0f86251ddd27f794a8833d
       "title": "Autumm",
       "dimensions": "521 x 700",
       "author": "Leonid Afrenov",
@@ -55,6 +75,10 @@
       "image": "https://i.ibb.co/cktm4DL/17.jpg"
     },
     {
+<<<<<<< HEAD
+=======
+      "id": 6,
+>>>>>>> 689ce857130b4103fa0f86251ddd27f794a8833d
       "title": "Refuse to change",
       "dimensions": "521 x 700",
       "author": "Pangborn",
@@ -66,6 +90,10 @@
       "image": "https://i.ibb.co/x5fXJHY/19.jpg"
     },
     {
+<<<<<<< HEAD
+=======
+      "id": 7,
+>>>>>>> 689ce857130b4103fa0f86251ddd27f794a8833d
       "title": "Wind",
       "dimensions": "521 x 700",
       "author": "Wild Imperfectrose",
@@ -77,6 +105,10 @@
       "image": "https://i.ibb.co/BzrFcX1/13-1.jpg"
     },
     {
+<<<<<<< HEAD
+=======
+      "id": 8,
+>>>>>>> 689ce857130b4103fa0f86251ddd27f794a8833d
       "title": "Rain",
       "dimensions": "521 x 700",
       "author": "Leonid Afrenov",
@@ -171,22 +203,36 @@
     {
       "title": "Museo del Prado",
       "description": "Amplia representación de obras Velázquez, Goya, Tiziano y Rubens en este museo con horario de entrada gratis y guías del museo para descargar gratis",
+<<<<<<< HEAD
       "location":"C. de Ruiz de Alarcón, 23, 28014 Madrid",
       "image":"https://i.ibb.co/rHLyFDZ/prado.jpg"
+=======
+      "location": "C. de Ruiz de Alarcón, 23, 28014 Madrid",
+      "image": "https://i.ibb.co/rHLyFDZ/prado.jpg"
+>>>>>>> 689ce857130b4103fa0f86251ddd27f794a8833d
     },
     {
       "title": "Museo Reina Sofía",
       "description": "El Museo Nacional Centro de Arte Reina Sofía centrado en arte contemporaneo con obras de grandes artistas españoles del siglo XX",
+<<<<<<< HEAD
       "location":"C. de Sta. Isabel, 52, 28012 Madrid",
       "image":
         "https://i.ibb.co/7NZ7Syj/reina.jpg"
+=======
+      "location": "C. de Sta. Isabel, 52, 28012 Madrid",
+      "image": "https://i.ibb.co/7NZ7Syj/reina.jpg"
+>>>>>>> 689ce857130b4103fa0f86251ddd27f794a8833d
     },
     {
       "title": "Museo Nacional de Artes Decorativas",
       "description": "Exposición de elementos de ornamentación de todo tipo: mobiliario, cristal, cerámica, alfombras, tapices, juguetes, etc. pertenecientes a los siglos XV al XIX, y objetos de las dinastías Ming y Qing.",
       "location": "P.º del Prado, 8, 28014 Madrid",
+<<<<<<< HEAD
       "image":
         "https://i.ibb.co/4dxqngQ/decor.jpg"
+=======
+      "image": "https://i.ibb.co/4dxqngQ/decor.jpg"
+>>>>>>> 689ce857130b4103fa0f86251ddd27f794a8833d
     },
     {
       "title": "Museo Thyssen Bornemisza",
@@ -198,29 +244,76 @@
       "title": "Museo Sorolla",
       "description": "El Museo Sorolla aspira a promover al máximo el conocimiento y disfrute del legado de Joaquín Sorolla por todo tipo de públicos, en el convencimiento de que este legado, y en particular las obras de Joaquín Sorolla, puede ofrecerles una experiencia emocional y estética positiva y enriquecedora, estimular sus sentidos, avivar en ellos la conciencia del sentido de la vista como instrumento de conocimiento y animarlos a utilizar sus propias capacidades creativas.",
       "location": "P.º del Gral. Martínez Campos, 37, 28010 Madrid",
+<<<<<<< HEAD
       "image":
         "https://i.ibb.co/gztH7kh/sorrolla.jpg"
+=======
+      "image": "https://i.ibb.co/gztH7kh/sorrolla.jpg"
+>>>>>>> 689ce857130b4103fa0f86251ddd27f794a8833d
     },
     {
       "title": "Museo arqueológico nacional",
       "description": "El Museo Arqueológico Nacional es una institución pública cuyo objetivo es ofrecer a todos los ciudadanos una interpretación rigurosa, atractiva, interesante y crítica del significado de los objetos que pertenecieron a los distintos pueblos de la actual España y del ámbito mediterráneo, desde la Antigüedad hasta épocas recientes, de manera que el conocimiento",
       "location": "Calle de Serrano, 13, 28001 Madrid",
+<<<<<<< HEAD
       "image":
         "https://i.ibb.co/nQXMFrK/arquer.jpg"
+=======
+      "image": "https://i.ibb.co/nQXMFrK/arquer.jpg"
+>>>>>>> 689ce857130b4103fa0f86251ddd27f794a8833d
     },
     {
       "title": "Museo Cerralbo",
       "description": "Es uno de los museos más importantes de Madrid, aunque también de los más desconocidos. Está situado en lo que fue la casa-palacio del XVII Marqués de Cerralbo y su visita traslada al visitante a la forma de vida de una familia aristocrática de finales del siglo XIX.",
       "location": "C. de Ventura Rodríguez, 17, 28008 Madrid",
+<<<<<<< HEAD
       "image":
         "https://i.ibb.co/R32VK8v/cerral.jpg"
+=======
+      "image": "https://i.ibb.co/R32VK8v/cerral.jpg"
+>>>>>>> 689ce857130b4103fa0f86251ddd27f794a8833d
     },
     {
       "title": "Museo Lázaro Galdiano",
       "description": "El Museo Lázaro Galdiano, en Madrid, es un museo estatal de origen privado, que alberga una amplia y heterogénea colección, formada con interés enciclopédico hacia todas las artes y técnicas.",
       "location": "C. Serrano, 122, 28006 Madrid",
+<<<<<<< HEAD
       "image":
         "https://i.ibb.co/WkBqcGC/lazaro.jpg"
     }
+=======
+      "image": "https://i.ibb.co/WkBqcGC/lazaro.jpg"
+    }
+  ],
+  "usersData": [
+    {
+      "name": "Museo del Prado",
+      "rol": "Amplia representación de obras Velázquez, Goya, Tiziano y Rubens en este museo con horario de entrada gratis y guías del museo para descargar gratis",
+      "contact": "C. de Ruiz de Alarcón, 23, 28014 Madrid",
+      "image": "https://i.ibb.co/rHLyFDZ/prado.jpg",
+      "id": 1
+    },
+    {
+      "name": "Museo Reina Sofía",
+      "rol": "El Museo Nacional Centro de Arte Reina Sofía centrado en arte contemporaneo con obras de grandes artistas españoles del siglo XX",
+      "contact": "C. de Sta. Isabel, 52, 28012 Madrid",
+      "image": "https://i.ibb.co/7NZ7Syj/reina.jpg",
+      "id": 2
+    },
+    {
+      "name": "Museo dela Prado",
+      "rol": "Amplia representación de obras Velázquez, Goya, Tiziano y Rubens en este museo con horario de entrada gratis y guías del museo para descargar gratis",
+      "contact": "C. de Ruiz de Alarcón, 23, 28014 Madrid",
+      "image": "https://i.ibb.co/rHLyFDZ/prado.jpg",
+      "id": 3
+    },
+    {
+      "name": "Museo dela ffff",
+      "rol": "Amplia representación de obras Velázquez, Goya, Tiziano y Rubens en este museo con horario de entrada gratis y guías del museo para descargar gratis",
+      "contact": "C. de Ruiz de Alarcón, 23, 28014 Madrid",
+      "image": "https://i.ibb.co/rHLyFDZ/prado.jpg",
+      "id": 4
+    }
+>>>>>>> 689ce857130b4103fa0f86251ddd27f794a8833d
   ]
 }
