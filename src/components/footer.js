@@ -39,6 +39,20 @@ const Footer = () => {
                 </span>
               </i>
             </FooterLink>
+            <FooterLink href="#">
+              <i className="fab fa-twitter">
+                <span style={{ marginLeft: "10px" }}>
+                  Instagram
+                </span>
+              </i>
+            </FooterLink>
+            <FooterLink href="#">
+              <i className="fab fa-twitter">
+                <span style={{ marginLeft: "10px" }}>
+                  Telegram
+                </span>
+              </i>
+            </FooterLink>
           </Column>
         </Row>
       </Container>

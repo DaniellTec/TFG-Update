@@ -6,9 +6,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import classes from "./Header.module.scss";
 import { Link, useHistory } from "react-router-dom";
 
-import { FaUserAlt, FaShoppingCart } from "react-icons/fa";
-
-import icon from '../images/icons/icon.ico';
+import { FaShoppingCart } from "react-icons/fa";
 
 const Header = () => {
     const history = useHistory();
