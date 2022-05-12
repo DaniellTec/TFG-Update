@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 //import style from './style.css'; //Importar archivo css 
 import '../css/styles.css';
-import { IconName } from "react-icons/bs";
-import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
+
 import { FaGoogle } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa";
-import google from '../images/icons/test.ico';
+
 import "bootstrap/dist/css/bootstrap.min.css";
 //import VisibilityIcon from '@mui/icons-material/Visibility';
 //import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';

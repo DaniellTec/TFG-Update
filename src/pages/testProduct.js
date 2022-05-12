@@ -4,10 +4,6 @@ import '../css/styles.css';
 
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
-
-
-
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 

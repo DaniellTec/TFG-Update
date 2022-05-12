@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react"
+import React from 'react';
 
-import paint from '../json/paint.json'
+import photo from '../json/photo.json'
 //import './css.css';
 import '../css/styles.css';
 
@@ -12,11 +12,11 @@ function strip(title) {
   return title.replace(/^(a|an|the)\s/i, "");
 }
 
-class Paintt extends React.Component {
+class Photoo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      paint: paint,
+      photo: photo,
       value: "Sort"
     };
     
@@ -27,36 +27,36 @@ class Paintt extends React.Component {
   }
 
   handleSubmit = (e) => {
-    const { value, paint } = this.state;
+    const { value, photo } = this.state;
   
     switch (value) {
       case "Low price":
         this.setState({
-          paint: paint.sort((a, b) => (a.price > b.price ? 1 : -1))
+          photo: photo.sort((a, b) => (a.price > b.price ? 1 : -1))
         });
         break;
       case "High price":
         this.setState({
-          paint: paint.sort((a, b) => (b.price > a.price ? 1 : -1))
+          photo: photo.sort((a, b) => (b.price > a.price ? 1 : -1))
         });
         break;
       case "A-Z":
         this.setState({
-          paint: paint.sort(
+          photo: photo.sort(
             (a, b) => (strip(a.title) > strip(b.title) ? 1 : -1)
           )
         });
         break;
       case "Z-A":
         this.setState({
-          paint: paint.sort(
+          photo: photo.sort(
             (a, b) => (strip(b.title) > strip(a.title) ? 1 : -1)
           )
         });
         break;
       default:
         this.setState({
-          paint: paint
+          photo: photo
         })
         break;
       
@@ -64,18 +64,17 @@ class Paintt extends React.Component {
     
     e.preventDefault();
   }
-  
+
   render() {
     
-    const { paint,value } = this.state;
-    
+    const { photo,value } = this.state;
     return (
       <>
       <div>
         <br/>
-        <p><a href="/home">Inicio</a> / <a href="/paint">Pinturas</a></p><p/>
+        <p><a href="/home">Inicio</a> / <a href="/photo">Fotografías</a></p><p/>
         <h1 class="left">
-    Pinturas en venta
+    Fotografías en venta
   </h1>
         <form onSubmit={this.handleSubmit}>
           <select class="btn btn-light" id="price-filter" value={value} onChange={this.handleChange}>
@@ -88,25 +87,24 @@ class Paintt extends React.Component {
           <input type="submit" value="OK" class="btn btn-dark" />
         </form>
         <section>
-          {paint.map(m => <Painttemplate paint={m} />)}
+          {photo.map(m => <Photootemplate photo={m} />)}
         </section>
       </div>
-      <br/>
        <Footer/>
        </>
     );
   }
 }
 
-class Painttemplate extends React.Component {
+class Photootemplate extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
-    const { title, dimensions, author, category, price, image } = this.props.paint;
+    const { title, author, category, price, image } = this.props.photo;
     return (
 <>
-<div className="boxPaint">
+<div className="boxPhoto">
        <div>
         <img src={image} width="275" className="imageProduct"/>
           <p>{title}</p>
@@ -121,4 +119,4 @@ class Painttemplate extends React.Component {
     );
   }
 }
-export default Paintt;
+export default Photoo;
