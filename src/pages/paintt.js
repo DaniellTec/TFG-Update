@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from "react"
-=======
 import React, { Component } from 'react';
 import axios from "axios";
->>>>>>> 689ce857130b4103fa0f86251ddd27f794a8833d
 
 import '../css/styles.css';
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -78,22 +74,6 @@ class Paintt extends React.Component {
     
     e.preventDefault();
   }
-<<<<<<< HEAD
-  
-  render() {
-    
-    const { paint,value } = this.state;
-    
-    return (
-      <>
-      <div>
-        <br/>
-        <p><a href="/home">Inicio</a> / <a href="/paint">Pinturas</a></p><p/>
-        <h1 class="left">
-    Pinturas en venta
-  </h1>
-        <form onSubmit={this.handleSubmit}>
-=======
 
   render(){
     const { data,value } = this.state;
@@ -107,7 +87,6 @@ Pinturas en venta
 </h1>
       <br/>
       <form onSubmit={this.handleSubmit}>
->>>>>>> 689ce857130b4103fa0f86251ddd27f794a8833d
           <select class="btn btn-light" id="price-filter" value={value} onChange={this.handleChange}>
             <option value="Sort">Ordenar por destacados</option>
             <option value="Low price">Precio: de más bajo a más alto</option>
