@@ -7,6 +7,24 @@ import "bootstrap/dist/css/bootstrap.min.css";
 //import VisibilityIcon from '@mui/icons-material/Visibility';
 //import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
+import Footer from '../components/footer';
+
+const url="http://localhost:3000/userData/";
+
+
+class Sign extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state={
+    data:[],
+    value: "Sort"
+    };
+  }
+  componentDidMount(){
+    this.peticionGet();
+  }
+}
+
 export default class Button extends Component {
 
   constructor(){
@@ -25,7 +43,7 @@ export default class Button extends Component {
   render() {
 
   return (
-
+<>
   <section class="vh-100 gradient-custom">
     <br/>
       <div class="col-md-6 col-lg-4 offset-lg-4 offset-md-3 mt-5">
@@ -64,10 +82,10 @@ export default class Button extends Component {
               </form>
           </div>
       </div>
-
   </section>
-    )
+</>
+    );
 
   }
-
 }
+

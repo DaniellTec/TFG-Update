@@ -33,6 +33,8 @@ class Paintt extends React.Component {
     this.peticionGet();
   }
 
+  ///////////////////////////
+
   handleChange = (e) => {
     this.setState({ value: e.target.value })  
   }
@@ -76,7 +78,7 @@ class Paintt extends React.Component {
   }
 
   render(){
-    const { data,value } = this.state;
+    const { form,value } = this.state;
   return (
     <>
     <div>

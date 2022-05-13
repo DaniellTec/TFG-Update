@@ -121,7 +121,7 @@ a:hover {
     border-radius: 10px;
     margin: 27px;
     width: 300px;
-    height: 500px;
+    height: 600px;
 
 }
 
@@ -360,3 +360,9 @@ body.active-modal {
 }
 /* end style cart
 */
+
+.item{
+  padding: 0;
+  border: none;
+  background: none;
+}
