@@ -84,6 +84,7 @@ seleccionarPintura=(paintData)=>{
       image: paintData.image,
       title: paintData.title,
       author: paintData.author,
+      dimensions: paintData.dimensions,
       category: paintData.category,
       price: paintData.price,
      
@@ -112,6 +113,9 @@ handleChange=async e=>{
     const { value, data } = this.state;
   
     switch (value) {
+      case "Sort":
+        window.location.reload();
+        break;
       case "Low price":
         this.setState({
           paint: data.sort((a, b) => (a.price > b.price ? 1 : -1))
@@ -120,20 +124,6 @@ handleChange=async e=>{
       case "High price":
         this.setState({
           paint: data.sort((a, b) => (b.price > a.price ? 1 : -1))
-        });
-        break;
-      case "A-Z":
-        this.setState({
-          paint: data.sort(
-            (a, b) => (strip(a.title) > strip(b.title) ? 1 : -1)
-          )
-        });
-        break;
-      case "Z-A":
-        this.setState({
-          paint: data.sort(
-            (a, b) => (strip(b.title) > strip(a.title) ? 1 : -1)
-          )
         });
         break;
       default:
@@ -161,8 +151,6 @@ handleChange=async e=>{
           &nbsp;<option value="Sort">Ordenar por destacados</option>
             <option value="Low price">Precio: de más bajo a más alto</option>
             <option value="High price">Precio: de más alto a más bajo</option>
-            <option value="A-Z">Nombre: ascendente</option>
-            <option value="Z-A">Nombre: descendente</option>
           </select>
           <input type="submit" value="OK" class="btn btn-dark" /> &nbsp;
           <button className="btn btn-success" onClick={()=>{this.setState({form: null, tipoModal: 'insertar'}); this.modalInsertar()}}>Agregar Pintura</button>
@@ -197,7 +185,7 @@ handleChange=async e=>{
                   <div className="form-group">
                     <br /> <br/> <br /> <br/> <br /> <br/> <br/> <br/> <br/>  <br /> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
                     <label htmlFor="id">ID</label>
-                    <input className="form-control" type="text" name="id" id="id" readOnly onChange={this.handleChange} value={this.state.data.length+1}/>
+                    <input className="form-control" type="text" name="id" id="id" readOnly onChange={this.handleChange} value={form?form.id: ''}/>
                     <br />
                     <label htmlFor="image">Imagen</label>
                     <input className="form-control" type="text" name="image" id="image" onChange={this.handleChange} value={form?form.image: ''}/>
