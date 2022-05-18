@@ -114,7 +114,7 @@ handleChange=async e=>{
   
     switch (value) {
       case "Sort":
-        window.location.reload();
+        //window.location.reload();
         break;
       case "Low price":
         this.setState({
@@ -142,13 +142,13 @@ handleChange=async e=>{
     <>
     <div>
       <br/>
-      <p><a href="/home">&nbsp; &nbsp; &nbsp; Inicio</a> / <a href="/paintt">Pinturas</a></p><p/>
+      <p><a href="/">&nbsp; &nbsp; &nbsp; Inicio</a> / <a href="/paintt">Pinturas</a></p><p/>
     <h1 class="left">
     &nbsp;  Pinturas en venta
     </h1>
       <form onSubmit={this.handleSubmit}>
       &nbsp;&nbsp;&nbsp;&nbsp; <select class="btn btn-light" id="price-filter" value={value} onChange={this.handleChange1}>
-          &nbsp;<option value="Sort">Ordenar por destacados</option>
+          &nbsp;<option  value="Sort">Ordenar por destacados</option>
             <option value="Low price">Precio: de más bajo a más alto</option>
             <option value="High price">Precio: de más alto a más bajo</option>
           </select>

@@ -149,6 +149,16 @@ a:hover {
 
 }
 
+.boxUsers{
+  background-color: white;
+  display: inline-flex; 
+  text-align: center;
+  border: 1px solid rgb(224, 224, 224) ;
+  border-radius: 10px;
+  margin: 25px;
+  width: 300px;
+}
+
 .card{
   background-color: white;
   width: 300px;
@@ -366,3 +376,8 @@ body.active-modal {
   border: none;
   background: none;
 }
+
+.alert{
+  text-align: center;
+}
+

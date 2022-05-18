@@ -1,70 +1,114 @@
-import React, { Component } from 'react'
-//import style from './style.css'; //Importar archivo css 
-import '../css/styles.css';
+import { useRef, useState, useEffect, useContext } from 'react';
+import AuthContext from "./context/AuthProvider";
 
-import { FaGoogle } from "react-icons/fa";
+import axios from './api/axios';
 
-import "bootstrap/dist/css/bootstrap.min.css";
-//import VisibilityIcon from '@mui/icons-material/Visibility';
-//import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import Footer from '../components/footer';
 
-export default class Button extends Component {
+const LOGIN_URL = '/auth';
 
-  constructor(){
-      //Maneja el ciclo, verdadero o 
-      super();
-      //Inicaliza la funcion
-      this.state = {
+const Login = () => {
+    const { setAuth } = useContext(AuthContext);
+    const userRef = useRef();
+    const errRef = useRef();
 
-          showPassword: false
+    const [user, setUser] = useState('');
+    const [pwd, setPwd] = useState('');
+    const [errMsg, setErrMsg] = useState('');
+    const [success, setSuccess] = useState(false);
 
-      }
+    useEffect(() => {
+        userRef.current.focus();
+    }, [])
 
-  }
+    useEffect(() => {
+        setErrMsg('');
+    }, [user, pwd])
 
-  //Comparte cÃ³digo con otros componentes
-  render() {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
 
-  return (
-  <section class="vh-100 gradient-custom">
-    <br/>
-      <div class="col-md-6 col-lg-4 offset-lg-4 offset-md-3 mt-5">
+        try {
+            const response = await axios.post(LOGIN_URL,
+                JSON.stringify({ user, pwd }),
+                {
+                    headers: { 'Content-Type': 'application/json' },
+                    withCredentials: true
+                }
+            );
+            console.log(JSON.stringify(response?.data));
+            //console.log(JSON.stringify(response));
+            const accessToken = response?.data?.accessToken;
+            const roles = response?.data?.roles;
+            setAuth({ user, pwd, roles, accessToken });
+            setUser('');
+            setPwd('');
+            setSuccess(true);
+        } catch (err) {
+            if (!err?.response) {
+                setErrMsg('No Server Response');
+            } else if (err.response?.status === 400) {
+                setErrMsg('Missing Username or Password');
+            } else if (err.response?.status === 401) {
+                setErrMsg('Unauthorized');
+            } else {
+                setErrMsg('Login Failed');
+            }
+            errRef.current.focus();
+        }
+    }
+
+    return (
+        <>
+            {success ? (
+                <section>
+                    <h1>You are logged in!</h1>
+                    <br />
+                    <p>
+                        <a href="#">Go to Home</a>
+                    </p>
+                </section>
+            ) : (
+                <section class="vh-100 gradient-custom">
+                                    <br/>
+          <div class="col-md-6 col-lg-4 offset-lg-4 offset-md-3 mt-5">
           <div class="bg-light p-5 border shadow">
-
-              <form>                
-                  <div class="mb-4">
-                      <input type="email" class="form-control form-control-lg" placeholder="Username/Email" required="Username/Email"/>
-                      {/*<p class="form-text text-end">Enter Valid Username/Email</p>*/}
-                  </div>
-
-                  <div class="mb-4">
-                    <div class="buttonIn">
-                      <input  type="password" id="typePasswordX" class="form-control form-control-lg"  placeholder="Enter password" required="Password" type= {this.state.showPassword ? "text" : "password" } />
-                      <br/>
-                      <input type="checkbox" class="form-check-input" onClick = { () => this.setState ( {showPassword: !this.state.showPassword })}/> Show Password
-                      {/*<p class= "form-text text-end">Reset Password</p>*/}
-                      <a href="#" class="float-end">Reset Password</a>
+                    <p ref={errRef} className={errMsg ? "errmsg" : "offscreen" } aria-live="assertive">{errMsg}</p>
+                    <form onSubmit={handleSubmit}>
+                        <label htmlFor="username"></label>
+                        <input
+                            type="text"
+                            id="username"
+                            ref={userRef}
+                            autoComplete="off"
+                            onChange={(e) => setUser(e.target.value)}
+                            value={user}
+                            required
+                            class="form-control form-control-lg"
+                            placeholder="Username/Email"
+                        /><br/>
+                        <label htmlFor="password"></label>
+                        <input
+                            type="password"
+                            id="password"
+                            onChange={(e) => setPwd(e.target.value)}
+                            value={pwd}
+                            required
+                            class="form-control form-control-lg"
+                            placeholder="Enter password"
+                        />
+                        <br/>
+                        <button class="btn btn-dark w-100 my-3 shadow">Sign In</button>
+                    </form>
+                    <br/>
+                    <p class="text-center ">No tienes una cuenta? <a href="register" color="black">Please Sign In</a></p>
                     </div>
-                  </div>
-                {/* 
-                  <div class="mb-4 form-check w-100">        
-                      <label class="form-check-label">
-                      <input type="checkbox" class="form-check-input"/> Remember Me*
-                      </label>
-                      <a href="#" class="float-end">Reset Password</a>
-                  </div>
-                */}
-                  <button type="submit" class="btn btn-primary w-100 my-3 shadow">{/*<img src={google}/>*/} <FaGoogle/> Sign In With Google</button>
-                  <hr/>
-                  <button type="submit" class="btn btn-dark w-100 my-3 shadow">Sign In</button>
-                  <p class="text-center m-0">No tienes cuenta? <a href="/sign">Please Sign Up</a></p>
-              </form>
-          </div>
-      </div>
-
-  </section>
+                    </div>
+                </section>
+            )}
+             <Footer/>
+        </>
     )
-
-  }
-
 }
+
+export default Login

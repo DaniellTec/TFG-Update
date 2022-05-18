@@ -48,7 +48,7 @@ export const FooterLink = styled.a`
   text-decoration: none;
    
   &:hover {
-      color: green;
+      color: #9966ff;
       transition: 200ms ease-in;
   }
 `;

@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import React from "react";
 
+import ReactTooltip from 'react-tooltip';
 
 //import Slider from "react-slick";
 
@@ -68,7 +69,7 @@ const Home = () => {
 <div class="col-md-3">
       <div class="card-body">
       <div class="product-2 align-items-center p-2 text-center">
-      <img src={lake} alt="" class="rounded img-fluid" width="300" />
+      <img src={lake} alt="" class="rounded img-fluid"  />
       <h5>Lake - Den Belitsky</h5>
     </div>
  </div> 
@@ -77,7 +78,7 @@ const Home = () => {
  <div class="col-md-3">
       <div class="card-body">
       <div class="product-2 align-items-center p-2 text-center">
-      <img src={mountain} alt="" class="rounded img-fluid" width="300" />
+      <img src={mountain} alt="" class="rounded img-fluid"  />
       <h5>Mountain - Unknown</h5>
     </div>
  </div> 
@@ -87,11 +88,13 @@ const Home = () => {
 <hr/>
 <br/>
 
-<h1 class="center">
+<h1 class="center" data-tip data-for="catalogue">
       Catálogo
     </h1>
+    <ReactTooltip id="catalogue">
+      Haz click y desliza con el mouse.
+    </ReactTooltip>
     <br/>
-
 
 <Component/>
 

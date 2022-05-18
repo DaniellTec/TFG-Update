@@ -71,14 +71,6 @@
       "category": "Oil",
       "price": 750,
       "id": 8
-    },
-    {
-      "image": "https://i.redd.it/hn51m3z29xb31.png",
-      "title": "Pure Vessel",
-      "author": "Team Cherry",
-      "category": "Game",
-      "price": "600",
-      "id": 9
     }
   ],
   "photosData": [
@@ -215,34 +207,14 @@
   ],
   "userData": [
     {
-      "user": "daniell",
-      "pwd": "d@n13llT",
-      "id": 1
+      "id": 1,
+      "user": "Daniell",
+      "pwd": "d@n13llT"
     },
     {
-      "user": "alavarito",
-      "pwd": "Al@v@r1to",
-      "id": 3
-    },
-    {
-      "user": "daniell",
-      "pwd": "d@n13llT",
-      "id": 4
-    },
-    {
-      "user": "daniell",
-      "pwd": "d@n13llT",
-      "id": 5
-    },
-    {
-      "user": "daniell",
-      "pwd": "d@n13llT",
-      "id": 6
-    },
-    {
-      "user": "daniell",
-      "pwd": "d@n13llT",
-      "id": 7
+      "id": 2,
+      "user": "Álvaro",
+      "pwd": "alavarito"
     }
   ]
 }

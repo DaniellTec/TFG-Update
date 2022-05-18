@@ -112,7 +112,7 @@ handleChange=async e=>{
   
     switch (value) {
       case "Sort":
-        window.location.reload();
+        //window.location.reload();
         break;
       case "Low price":
         this.setState({
@@ -140,7 +140,7 @@ handleChange=async e=>{
     <>
     <div>
       <br/>
-      <p><a href="/home">&nbsp; &nbsp; &nbsp; Inicio</a> / <a href="/photoo">Fotografías</a></p><p/>
+      <p><a href="/">&nbsp; &nbsp; &nbsp; Inicio</a> / <a href="/photoo">Fotografías</a></p><p/>
     <h1 class="left">
     &nbsp;  Fotografías en venta
     </h1>

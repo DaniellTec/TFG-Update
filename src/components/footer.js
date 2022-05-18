@@ -8,6 +8,8 @@ import {
   FooterLink,
   Heading,
 } from "./FooterStyles";
+
+import '../css/styles.css';
   
 const Footer = () => {
   return (
@@ -16,43 +18,46 @@ const Footer = () => {
                    textAlign: "center", 
                    marginTop: "-50px",
                     }}>
-        World Of Art
+        {/*World Of Art*/}
       </h1>
+      <br/>
       <Container>
         <Row>
           <Column>
             <Heading>About Us</Heading>
-            <FooterLink href="#">Team</FooterLink>
-            <FooterLink href="#">Help</FooterLink>
+            <FooterLink href="">Team</FooterLink>
+            <FooterLink href="/users">Users</FooterLink>
+            <FooterLink href="">Help</FooterLink>
           </Column>
-          <Column>
-            <Heading>Contact Us</Heading>
-            <FooterLink href="#">Madrid</FooterLink>
-          </Column>
+        
           <Column>
             <Heading>Social Media</Heading>
            
-            <FooterLink href="#">
+            <FooterLink href="">
               <i className="fab fa-twitter">
                 <span style={{ marginLeft: "10px" }}>
                   Twitter
                 </span>
               </i>
             </FooterLink>
-            <FooterLink href="#">
+            <FooterLink href="">
               <i className="fab fa-twitter">
                 <span style={{ marginLeft: "10px" }}>
                   Instagram
                 </span>
               </i>
             </FooterLink>
-            <FooterLink href="#">
+            <FooterLink href="">
               <i className="fab fa-twitter">
                 <span style={{ marginLeft: "10px" }}>
                   Telegram
                 </span>
               </i>
             </FooterLink>
+          </Column>
+          <Column>
+            <Heading>Contact Us</Heading>
+            <FooterLink href="">Madrid</FooterLink>
           </Column>
         </Row>
       </Container>
