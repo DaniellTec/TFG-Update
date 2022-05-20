@@ -4,10 +4,13 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { FaCartPlus } from "react-icons/fa";
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import Footer from '../components/footer';
 
 const url="http://localhost:3000/paintingsData/";
+
+const url1="http://localhost:3000/cartData/";
 
 function strip(title) {
   return title.replace(/^(a|an|the)\s/i, "");
@@ -24,6 +27,7 @@ class Paintt extends Component {
   state={
   data:[],
   modalInsertar: false,
+  modalComprar: false,
   modalEliminar: false,
   form:{
     id: '',
@@ -48,18 +52,33 @@ class Paintt extends Component {
     this.peticionGet();
   }
 
-  peticionPost=async()=>{
-    delete this.state.form.id;
-    await axios.post(url,this.state.form).then(response=>{
-    this.modalInsertar();
-    this.peticionGet();
-   }).catch(error=>{
-    console.log(error.message);
-   })
+peticionPost=async()=>{
+  delete this.state.form.id;
+  await axios.post(url,this.state.form).then(response=>{
+  this.modalInsertar();
+  
+  this.peticionGet();
+ }).catch(error=>{
+  console.log(error.message);
+ })
+}
+
+peticionPost1=async()=>{
+  delete this.state.form.id;
+  await axios.post(url1,this.state.form).then(response=>{
+    this.modalComprar();
+  this.peticionGet();
+ }).catch(error=>{
+  console.log(error.message);
+ })
 }
 
 modalInsertar=()=>{
   this.setState({modalInsertar: !this.state.modalInsertar});
+}
+
+modalComprar=()=>{
+  this.setState({modalComprar: !this.state.modalComprar});
 }
 
   peticionPut=()=>{
@@ -137,6 +156,7 @@ handleChange=async e=>{
   }
   
   render(){
+    
     const { value, form }=this.state;
   return (
     <>
@@ -158,15 +178,18 @@ handleChange=async e=>{
     <section>
         {this.state.data.map(paintData=>{
           return(
+            
           <div className="boxPaint" >
             <div>
-            <img src = {paintData.image} width="275" className="imageProduct"/>
+            <img src = {paintData.image} width="270" className="imageProduct"/>
                 <p>{paintData.title}</p>
                 <p>{paintData.author}</p>
                 <p>{paintData.category}</p>
                 <p>{paintData.price}€</p>
                 <div>
                   <button className="btn btn-primary" onClick={()=>{this.seleccionarPintura(paintData); this.modalInsertar()}}><FontAwesomeIcon icon={faEdit}/></button>
+                  {"   "}
+                  <button className="btn btn-primary" onClick={()=>{this.seleccionarPintura(paintData); this.modalComprar()}}><FaCartPlus/></button>
                   {"   "}
                   <button className="btn btn-danger" onClick={()=>{this.seleccionarPintura(paintData); this.setState({modalEliminar: true})}}><FontAwesomeIcon icon={faTrashAlt}/></button>
               </div>
@@ -175,7 +198,49 @@ handleChange=async e=>{
           )
         })}
         </section>
-             <Modal isOpen={this.state.modalInsertar}>
+        
+        
+             <Modal isOpen={this.state.modalComprar}>
+                <ModalHeader style={{display: 'block'}}>
+                  <span style={{float: 'right'}} onClick={()=>this.modalComprar()}>x</span>
+                </ModalHeader>
+
+                <ModalBody>
+                  <br/>
+                  <div className="form-group">
+                    <br /> <br/> <br /> <br/> <br /> <br/> <br/> <br/> <br/>  <br /> <br/> <br/> 
+                    <label htmlFor="title">Título</label>
+                    <input className="form-control" type="text" name="title" id="title" onChange={this.handleChange} value={form?form.title: ''}/>
+                    <br />
+                    <label htmlFor="author">Autor</label>
+                    <input className="form-control" type="text" name="author" id="author" onChange={this.handleChange} value={form?form.author:''}/>
+                    <br />
+                    <label htmlFor="category">Categoría</label>
+                    <input className="form-control" type="text" name="category" id="category" onChange={this.handleChange} value={form?form.category:''}/>
+                    <br />
+                    <label htmlFor="price">Precio</label>
+                    <input className="form-control" type="text" name="price" id="price" onChange={this.handleChange} value={form?form.price:''}/>
+                  </div>
+                </ModalBody>
+
+                <ModalFooter>
+                  {this.state.tipoModal=='comprar'?
+                    <button className="btn btn-success" onClick={()=>this.peticionPost()}>
+                    Insertar
+                  </button>:
+                   
+                   <button className="btn btn-primary" onClick={()=>this.peticionPost1()}>
+                   Comprar
+                 </button>
+                  
+                  }
+                  
+                    <button className="btn btn-danger" onClick={()=>this.modalComprar()}>Cancelar</button>
+                </ModalFooter>
+
+                </Modal>
+
+                <Modal isOpen={this.state.modalInsertar}>
                 <ModalHeader style={{display: 'block'}}>
                   <span style={{float: 'right'}} onClick={()=>this.modalInsertar()}>x</span>
                 </ModalHeader>
@@ -208,12 +273,17 @@ handleChange=async e=>{
                   {this.state.tipoModal=='insertar'?
                     <button className="btn btn-success" onClick={()=>this.peticionPost()}>
                     Insertar
-                  </button>: <button className="btn btn-primary" onClick={()=>this.peticionPut()}>
+                  </button>:
+                   
+                  <button className="btn btn-primary" onClick={()=>this.peticionPut()}>
                     Actualizar
                   </button>
+                  
                   }
                     <button className="btn btn-danger" onClick={()=>this.modalInsertar()}>Cancelar</button>
                 </ModalFooter>
+             
+
           </Modal>
           <Modal isOpen={this.state.modalEliminar}>
             <ModalBody>

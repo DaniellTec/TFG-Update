@@ -89,7 +89,7 @@ const Header = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/testProduct" onClick={menuToggleHandler}>
+                            <Link to="/cart" onClick={menuToggleHandler}>
                             <FaShoppingCart/>
                             </Link>
                         </li>              

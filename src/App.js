@@ -18,7 +18,7 @@ import Register from './pages/register';
 
 import Users from './pages/users';
 
-import Product from './pages/testProduct';
+import Cart from './pages/shoppingCart';
 
 function App() {
     return (
@@ -48,8 +48,8 @@ function App() {
                 <Route path="/register">
                     <Register/>
                 </Route>
-                <Route path="/testProduct">
-                    <Product/>
+                <Route path="/shoppingCart">
+                    <Cart/>
                 </Route>
                 <Route path="/users">
                     <Users/>

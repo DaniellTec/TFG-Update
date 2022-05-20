@@ -4,8 +4,8 @@
       "id": 1,
       "image": "https://i.ibb.co/fGf8SKd/1.jpg",
       "title": "Blacksad",
-      "dimensions": "521 x 700",
       "author": "Juanjo Guarnido",
+      "dimensions": "521 x 700",
       "category": "Oleo",
       "price": "1100"
     },
@@ -215,6 +215,51 @@
       "id": 2,
       "user": "Álvaro",
       "pwd": "alavarito"
+    }
+  ],
+  "cartData": [
+    {
+      "image": "https://i.ibb.co/fGf8SKd/1.jpg",
+      "title": "Blacksad",
+      "author": "Juanjo Guarnido",
+      "dimensions": "521 x 700",
+      "category": "Oleo",
+      "price": "1100",
+      "id": 1
+    },
+    {
+      "image": "https://i.ibb.co/9NxYz1V/2.jpg",
+      "title": "Face",
+      "author": "José Villaseñor",
+      "dimensions": "521 x 700",
+      "category": "Abstract",
+      "price": 700,
+      "id": 2
+    },
+    {
+      "image": "https://i.ibb.co/KFn8TBJ/16.jpg",
+      "title": "Dog",
+      "author": "Michelle Williamson",
+      "dimensions": "521 x 700",
+      "category": "Oil",
+      "price": 750,
+      "id": 3
+    },
+    {
+      "image": "https://i.ibb.co/cYRm6yz/3.jpg",
+      "title": "Tunnel",
+      "dimensions": "521 x 700",
+      "category": "Modern",
+      "price": "600",
+      "id": 4
+    },
+    {
+      "image": "https://i.ibb.co/Sx1nYjD/26.jpg",
+      "title": "Japan Village",
+      "dimensions": "521 x 700",
+      "category": "Cities",
+      "price": 775,
+      "id": 5
     }
   ]
 }

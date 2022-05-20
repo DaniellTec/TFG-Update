@@ -178,7 +178,7 @@ handleChange=async e=>{
                 <ModalBody>
                   <br/>
                   <div className="form-group">
-                    <br /> <br/> <br /> <br/> <br /> <br/> <br/> <br/> <br/>  <br /> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+                     <br/> <br /> <br/> <br/> <br/> <br/>  <br /> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
                     <label htmlFor="id">ID</label>
                     <input className="form-control" type="text" name="id" id="id" readOnly onChange={this.handleChange} value={form?form.id: ''}/>
                     <br />
