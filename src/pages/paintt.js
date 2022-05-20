@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from "react"
-=======
 import React, { Component } from 'react';
-import axios from "axios";
->>>>>>> 689ce857130b4103fa0f86251ddd27f794a8833d
-
 import '../css/styles.css';
+import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import Footer from '../components/footer';
 
 const url="http://localhost:3000/paintingsData/";
@@ -16,7 +13,7 @@ function strip(title) {
   return title.replace(/^(a|an|the)\s/i, "");
 }
 
-class Paintt extends React.Component {
+class Paintt extends Component {
   constructor(props) {
     super(props)
     this.state={
@@ -24,20 +21,91 @@ class Paintt extends React.Component {
     value: "Sort"
     };
   }
-
+  state={
+  data:[],
+  modalInsertar: false,
+  modalEliminar: false,
+  form:{
+    id: '',
+    image: '',
+    title: '',
+    dimensions: '',
+    author: '',
+    price: ''
+    
+    }
+  }
+  
   peticionGet=()=>{
     axios.get(url).then(response=>{
       this.setState({data: response.data});
     }).catch(error=>{
       console.log(error.message);
     })
-  }
+    }
 
   componentDidMount(){
     this.peticionGet();
   }
 
-  handleChange = (e) => {
+  peticionPost=async()=>{
+    delete this.state.form.id;
+    await axios.post(url,this.state.form).then(response=>{
+    this.modalInsertar();
+    this.peticionGet();
+   }).catch(error=>{
+    console.log(error.message);
+   })
+}
+
+modalInsertar=()=>{
+  this.setState({modalInsertar: !this.state.modalInsertar});
+}
+
+  peticionPut=()=>{
+    axios.put(url+this.state.form.id, this.state.form).then(response=>{
+      this.modalInsertar();
+      this.peticionGet();
+    })
+  }
+
+peticionDelete=()=>{
+  axios.delete(url+this.state.form.id).then(response=>{
+    this.setState({modalEliminar: false});
+    this.peticionGet();
+  })
+}
+
+seleccionarPintura=(paintData)=>{
+  this.setState({
+    tipoModal: 'actualizar',
+    form: {
+      id: paintData.id,
+      image: paintData.image,
+      title: paintData.title,
+      author: paintData.author,
+      dimensions: paintData.dimensions,
+      category: paintData.category,
+      price: paintData.price,
+     
+    }
+  })
+}
+
+handleChange=async e=>{
+  e.persist();
+  await this.setState({
+    form:{
+      ...this.state.form,
+      [e.target.name]: e.target.value
+    }
+  });
+  console.log(this.state.form);
+  }
+
+///////////////////////////////////////
+
+  handleChange1 = (e) => {
     this.setState({ value: e.target.value })  
   }
 
@@ -45,6 +113,9 @@ class Paintt extends React.Component {
     const { value, data } = this.state;
   
     switch (value) {
+      case "Sort":
+        window.location.reload();
+        break;
       case "Low price":
         this.setState({
           paint: data.sort((a, b) => (a.price > b.price ? 1 : -1))
@@ -53,20 +124,6 @@ class Paintt extends React.Component {
       case "High price":
         this.setState({
           paint: data.sort((a, b) => (b.price > a.price ? 1 : -1))
-        });
-        break;
-      case "A-Z":
-        this.setState({
-          paint: data.sort(
-            (a, b) => (strip(a.title) > strip(b.title) ? 1 : -1)
-          )
-        });
-        break;
-      case "Z-A":
-        this.setState({
-          paint: data.sort(
-            (a, b) => (strip(b.title) > strip(a.title) ? 1 : -1)
-          )
         });
         break;
       default:
@@ -78,59 +135,96 @@ class Paintt extends React.Component {
     
     e.preventDefault();
   }
-<<<<<<< HEAD
   
-  render() {
-    
-    const { paint,value } = this.state;
-    
-    return (
-      <>
-      <div>
-        <br/>
-        <p><a href="/home">Inicio</a> / <a href="/paint">Pinturas</a></p><p/>
-        <h1 class="left">
-    Pinturas en venta
-  </h1>
-        <form onSubmit={this.handleSubmit}>
-=======
-
   render(){
-    const { data,value } = this.state;
+    const { value, form }=this.state;
   return (
     <>
     <div>
-    <br/>
-    <p><a href="/home">Inicio</a> / <a href="/paintt">Pinturas</a></p><p/>
-    <h1 class="left">
-Pinturas en venta
-</h1>
       <br/>
+      <p><a href="/home">&nbsp; &nbsp; &nbsp; Inicio</a> / <a href="/paintt">Pinturas</a></p><p/>
+    <h1 class="left">
+    &nbsp;  Pinturas en venta
+    </h1>
       <form onSubmit={this.handleSubmit}>
->>>>>>> 689ce857130b4103fa0f86251ddd27f794a8833d
-          <select class="btn btn-light" id="price-filter" value={value} onChange={this.handleChange}>
-            <option value="Sort">Ordenar por destacados</option>
+      &nbsp;&nbsp;&nbsp;&nbsp; <select class="btn btn-light" id="price-filter" value={value} onChange={this.handleChange1}>
+          &nbsp;<option value="Sort">Ordenar por destacados</option>
             <option value="Low price">Precio: de más bajo a más alto</option>
             <option value="High price">Precio: de más alto a más bajo</option>
-            <option value="A-Z">Nombre: ascendente</option>
-            <option value="Z-A">Nombre: descendente</option>
           </select>
-          <input type="submit" value="OK" class="btn btn-dark" />
+          <input type="submit" value="OK" class="btn btn-dark" /> &nbsp;
+          <button className="btn btn-success" onClick={()=>{this.setState({form: null, tipoModal: 'insertar'}); this.modalInsertar()}}>Agregar Pintura</button>
         </form>
-        <section>
+    <section>
         {this.state.data.map(paintData=>{
           return(
           <div className="boxPaint" >
             <div>
-                <img src = {paintData.image} width="275" className="imageProduct"/>
+            <img src = {paintData.image} width="275" className="imageProduct"/>
                 <p>{paintData.title}</p>
                 <p>{paintData.author}</p>
+                <p>{paintData.category}</p>
                 <p>{paintData.price}€</p>
+                <div>
+                  <button className="btn btn-primary" onClick={()=>{this.seleccionarPintura(paintData); this.modalInsertar()}}><FontAwesomeIcon icon={faEdit}/></button>
+                  {"   "}
+                  <button className="btn btn-danger" onClick={()=>{this.seleccionarPintura(paintData); this.setState({modalEliminar: true})}}><FontAwesomeIcon icon={faTrashAlt}/></button>
+              </div>
             </div>
           </div>
           )
         })}
         </section>
+             <Modal isOpen={this.state.modalInsertar}>
+                <ModalHeader style={{display: 'block'}}>
+                  <span style={{float: 'right'}} onClick={()=>this.modalInsertar()}>x</span>
+                </ModalHeader>
+
+                <ModalBody>
+                  <br/>
+                  <div className="form-group">
+                    <br /> <br/> <br /> <br/> <br /> <br/> <br/> <br/> <br/>  <br /> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+                    <label htmlFor="id">ID</label>
+                    <input className="form-control" type="text" name="id" id="id" readOnly onChange={this.handleChange} value={form?form.id: ''}/>
+                    <br />
+                    <label htmlFor="image">Imagen</label>
+                    <input className="form-control" type="text" name="image" id="image" onChange={this.handleChange} value={form?form.image: ''}/>
+                    <br />
+                    <label htmlFor="title">Título</label>
+                    <input className="form-control" type="text" name="title" id="title" onChange={this.handleChange} value={form?form.title: ''}/>
+                    <br />
+                    <label htmlFor="author">Autor</label>
+                    <input className="form-control" type="text" name="author" id="author" onChange={this.handleChange} value={form?form.author:''}/>
+                    <br />
+                    <label htmlFor="category">Categoría</label>
+                    <input className="form-control" type="text" name="category" id="category" onChange={this.handleChange} value={form?form.category:''}/>
+                    <br />
+                    <label htmlFor="price">Precio</label>
+                    <input className="form-control" type="text" name="price" id="price" onChange={this.handleChange} value={form?form.price:''}/>
+                  </div>
+                </ModalBody>
+
+                <ModalFooter>
+                  {this.state.tipoModal=='insertar'?
+                    <button className="btn btn-success" onClick={()=>this.peticionPost()}>
+                    Insertar
+                  </button>: <button className="btn btn-primary" onClick={()=>this.peticionPut()}>
+                    Actualizar
+                  </button>
+                  }
+                    <button className="btn btn-danger" onClick={()=>this.modalInsertar()}>Cancelar</button>
+                </ModalFooter>
+          </Modal>
+          <Modal isOpen={this.state.modalEliminar}>
+            <ModalBody>
+            <br /> <br/> <br/> <br/>
+               Estás seguro que deseas eliminar la pintura {form && form.title}?
+            </ModalBody>
+            <ModalFooter>
+              <button className="btn btn-danger" onClick={()=>this.peticionDelete()}>Sí</button>
+              <button className="btn btn-secundary" onClick={()=>this.setState({modalEliminar: false})}>No</button>
+            </ModalFooter>
+          </Modal>
     </div>
     <br/>
     <Footer/>
