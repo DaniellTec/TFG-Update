@@ -14,9 +14,11 @@ import Photoo from "./pages/photoo";
 
 import Museum from "./pages/museumm";
 import Login from './pages/login';
-import Sign from './pages/sign';
+import Register from './pages/register';
 
-import Product from './pages/testProduct';
+import Users from './pages/users';
+
+import Cart from './pages/shoppingCart';
 
 function App() {
     return (
@@ -43,11 +45,14 @@ function App() {
                 <Route path="/login">
                     <Login/>
                 </Route>
-                <Route path="/sign">
-                    <Sign/>
+                <Route path="/register">
+                    <Register/>
                 </Route>
-                <Route path="/testProduct">
-                    <Product/>
+                <Route path="/shoppingCart">
+                    <Cart/>
+                </Route>
+                <Route path="/users">
+                    <Users/>
                 </Route>
             </Switch>
             {/*<Footer/>*/}

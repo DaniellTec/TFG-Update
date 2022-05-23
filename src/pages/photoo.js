@@ -4,10 +4,13 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { FaCartPlus } from "react-icons/fa";
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import Footer from '../components/footer';
 
 const url="http://localhost:3000/photosData/";
+
+const url1="http://localhost:3000/cartData/";
 
 function strip(title) {
   return title.replace(/^(a|an|the)\s/i, "");
@@ -24,6 +27,7 @@ class Photoo extends Component {
   state={
   data:[],
   modalInsertar: false,
+  modalComprar: false,
   modalEliminar: false,
   form:{
     id: '',
@@ -57,9 +61,24 @@ class Photoo extends Component {
    })
 }
 
+peticionPost1=async()=>{
+  delete this.state.form.id;
+  await axios.post(url1,this.state.form).then(response=>{
+    this.modalComprar();
+  this.peticionGet();
+ }).catch(error=>{
+  console.log(error.message);
+ })
+}
+
 modalInsertar=()=>{
   this.setState({modalInsertar: !this.state.modalInsertar});
 }
+
+modalComprar=()=>{
+  this.setState({modalComprar: !this.state.modalComprar});
+}
+
 
   peticionPut=()=>{
     axios.put(url+this.state.form.id, this.state.form).then(response=>{
@@ -112,7 +131,7 @@ handleChange=async e=>{
   
     switch (value) {
       case "Sort":
-        window.location.reload();
+        //window.location.reload();
         break;
       case "Low price":
         this.setState({
@@ -140,7 +159,7 @@ handleChange=async e=>{
     <>
     <div>
       <br/>
-      <p><a href="/home">&nbsp; &nbsp; &nbsp; Inicio</a> / <a href="/photoo">Fotografías</a></p><p/>
+      <p><a href="/">&nbsp; &nbsp; &nbsp; Inicio</a> / <a href="/photoo">Fotografías</a></p><p/>
     <h1 class="left">
     &nbsp;  Fotografías en venta
     </h1>
@@ -158,13 +177,15 @@ handleChange=async e=>{
           return(
           <div className="boxPhoto" >
             <div>
-            <img src = {photoData.image} width="275" className="imageProduct"/>
+            <img src = {photoData.image} width="270" className="imageProduct"/>
                 <p>{photoData.title}</p>
                 <p>{photoData.author}</p>
                 <p>{photoData.category}</p>
                 <p>{photoData.price}€</p>
                 <div>
                   <button className="btn btn-primary" onClick={()=>{this.seleccionarFotografia(photoData); this.modalInsertar()}}><FontAwesomeIcon icon={faEdit}/></button>
+                  {"   "}
+                  <button className="btn btn-primary" onClick={()=>{this.seleccionarFotografia(photoData); this.modalComprar()}}><FaCartPlus/></button>
                   {"   "}
                   <button className="btn btn-danger" onClick={()=>{this.seleccionarFotografia(photoData); this.setState({modalEliminar: true})}}><FontAwesomeIcon icon={faTrashAlt}/></button>
               </div>
@@ -173,6 +194,7 @@ handleChange=async e=>{
           )
         })}
         </section>
+
              <Modal isOpen={this.state.modalInsertar}>
                 <ModalHeader style={{display: 'block'}}>
                   <span style={{float: 'right'}} onClick={()=>this.modalInsertar()}>x</span>
@@ -210,6 +232,44 @@ handleChange=async e=>{
                     <button className="btn btn-danger" onClick={()=>this.modalInsertar()}>Cancelar</button>
                 </ModalFooter>
           </Modal>
+
+          <Modal isOpen={this.state.modalComprar}>
+                <ModalHeader style={{display: 'block'}}>
+                  <span style={{float: 'right'}} onClick={()=>this.modalComprar()}>x</span>
+                </ModalHeader>
+
+                <ModalBody>
+                  <br/>
+                  <div className="form-group">
+                    <br/> <br /> <br/> <br/> <br/> <br/>  <br /> <br/> <br/> 
+                    <label htmlFor="title">Título</label>
+                    <input className="form-control" type="text" name="title" id="title" onChange={this.handleChange} value={form?form.title: ''}/>
+                    <br />
+                    <label htmlFor="category">Categoría</label>
+                    <input className="form-control" type="text" name="category" id="category" onChange={this.handleChange} value={form?form.category:''}/>
+                    <br />
+                    <label htmlFor="price">Precio</label>
+                    <input className="form-control" type="text" name="price" id="price" onChange={this.handleChange} value={form?form.price:''}/>
+                  </div>
+                </ModalBody>
+
+                <ModalFooter>
+                  {this.state.tipoModal=='comprar'?
+                    <button className="btn btn-success" onClick={()=>this.peticionPost()}>
+                    Insertar
+                  </button>:
+                   
+                   <button className="btn btn-primary" onClick={()=>this.peticionPost1()}>
+                   Comprar
+                 </button>
+                  
+                  }
+                  
+                    <button className="btn btn-danger" onClick={()=>this.modalComprar()}>Cancelar</button>
+                </ModalFooter>
+
+                </Modal>
+
           <Modal isOpen={this.state.modalEliminar}>
             <ModalBody>
             <br /> <br/> <br/> <br/>

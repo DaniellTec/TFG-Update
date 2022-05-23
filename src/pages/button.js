@@ -1,57 +1,56 @@
-import React, { Component } from 'react'
-//import style from './style.css'; //Importar archivo css 
-import '../css/styles.css';
-import { IconName } from "react-icons/bs";
-import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
-import "bootstrap/dist/css/bootstrap.min.css";
-//import VisibilityIcon from '@mui/icons-material/Visibility';
-//import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import React from 'react';
+import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as Yup from 'yup';
 
-export default class Button extends Component {
+function Button() {
+    // form validation rules 
+    const validationSchema = Yup.object().shape({
+        password: Yup.string()
+            .required('Password is required')
+            .min(6, 'Password must be at least 6 characters'),
+        confirmPassword: Yup.string()
+            .required('Confirm Password is required')
+            .oneOf([Yup.ref('password')], 'Passwords must match')
+            
+    });
+    const formOptions = { resolver: yupResolver(validationSchema) };
 
-    constructor(){
-        //Maneja el ciclo, verdadero o 
-        super();
-        //Inicaliza la funcion
-        this.state = {
+    // get functions to build form with useForm() hook
+    const { register, handleSubmit, reset, formState } = useForm(formOptions);
+    const { errors } = formState;
 
-            showPassword: false
-
-        }
-
+    function onSubmit(data) {
+        // display form data on success
+        alert('SUCCESS!! :-)\n\n' + JSON.stringify(data, null, 4));
+        return false;
     }
 
-    //Comparte código con otros componentes
-    render() {
-
-        return (
-
-            <div className = "row justify-content-center">
-
-                <div class="form-outline form-white mb-4">
-                    <input type="email" id="typeEmailX" class="form-control form-control-lg" />
-                    <label class="form-label" for="typeEmailX">Email</label>
-                </div>
-                    <input  type="password" id="typePasswordX" class="form-control form-control-lg"  placeholder="Type..." type= {this.state.showPassword ? "text" : "password" } />
-                        
-                    <center>
-
-                        <br />
-                        
-                        <button type= "button" class="btn btn-primary" onClick = { () => this.setState ( {showPassword: !this.state.showPassword })}>
-
-                        {/*
-                        
-                            El icono cambio por cada vez que cambia el estado
-
-                        */}
-
-                    {this.state.showPassword ? <BsFillEyeFill/> : <BsFillEyeSlashFill/>}
-                    
-                        </button>
-
-                    </center>
+    return (
+        <div className="card m-3">
+            <h5 className="card-header">React Hook Form - Password and Confirm Password Match Validation</h5>
+            <div className="card-body">
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <div className="form-row">
+                        <div className="form-group col">
+                            <label>Password</label>
+                            <input name="password" type="password" {...register('password')} className={`form-control ${errors.password ? 'is-invalid' : ''}`} />
+                            <div className="invalid-feedback">{errors.password?.message}</div>
+                        </div>
+                        <div className="form-group col">
+                            <label>Confirm Password</label>
+                            <input name="confirmPassword" type="password" {...register('confirmPassword')} className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''}`} />
+                            <div className="invalid-feedback">{errors.confirmPassword?.message}</div>
+                        </div>
+                    </div>
+                    <div className="form-group">
+                        <button type="submit" className="btn btn-primary mr-1">Register</button>
+                        <button type="button" onClick={() => reset()} className="btn btn-secondary">Reset</button>
+                    </div>
+                </form>
             </div>
-        )
-    }
+        </div>
+    )
 }
+
+export default Button;

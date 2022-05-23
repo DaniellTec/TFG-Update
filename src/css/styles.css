@@ -120,7 +120,7 @@ a:hover {
     border: 1px solid rgb(224, 224, 224) ;
     border-radius: 10px;
     margin: 27px;
-    width: 300px;
+    width: 290px;
     height: 600px;
 
 }
@@ -132,7 +132,7 @@ a:hover {
   border: 1px solid rgb(224, 224, 224) ;
   border-radius: 10px;
   margin: 27px;
-  width: 300px;
+  width: 290px;
   height: 570px;
 
 }
@@ -147,6 +147,26 @@ a:hover {
   width: 300px;
   height: 350px;
 
+}
+
+.boxUsers{
+  background-color: white;
+  display: inline-flex; 
+  text-align: center;
+  border: 1px solid rgb(224, 224, 224) ;
+  border-radius: 10px;
+  margin: 25px;
+  width: 300px;
+}
+
+.boxCart{
+  background-color: white;
+  display: inline-flex; 
+  text-align: center;
+  border: 1px solid rgb(224, 224, 224) ;
+  border-radius: 10px;
+  margin: 25px;
+  width: 200;
 }
 
 .card{
@@ -366,3 +386,8 @@ body.active-modal {
   border: none;
   background: none;
 }
+
+.alert{
+  text-align: center;
+}
+

@@ -6,7 +6,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import classes from "./Header.module.scss";
 import { Link, useHistory } from "react-router-dom";
 
-import { FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart, FaUserAlt } from "react-icons/fa";
 
 const Header = () => {
     const history = useHistory();
@@ -84,12 +84,12 @@ const Header = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/login" onClick={menuToggleHandler}>
-                           Log in | Register
+                            <Link to="/register" onClick={menuToggleHandler}>
+                           <FaUserAlt/>
                             </Link>
                         </li>
                         <li>
-                            <Link to="/testProduct" onClick={menuToggleHandler}>
+                            <Link to="/cart" onClick={menuToggleHandler}>
                             <FaShoppingCart/>
                             </Link>
                         </li>              

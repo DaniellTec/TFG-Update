@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
+import ReactTooltip from 'react-tooltip';
 
 import image1 from '../images/home/8.jpg';
 import image2 from '../images/home/9.jpg';
@@ -31,7 +32,10 @@ export default class SwipeToSlide extends Component {
   <div>
     <div class="card-body">
     <div class="product-2 align-items-center p-2 text-center">
-    <img src={image1} alt="" class="rounded"/>
+    <img src={image1} alt="" class="rounded" data-tip data-for="img1"/>
+    <ReactTooltip id="img1">
+      Haz click y desliza con el mouse.
+    </ReactTooltip>
     <h5>Titulo</h5>
     <div class="mt-3 info">
       <span class="text-1 d-block">Descripción</span>
@@ -57,7 +61,10 @@ export default class SwipeToSlide extends Component {
   <div>
     <div class="card-body">
     <div class="product-2 align-items-center p-2 text-center">
-    <img src={image3} alt="" class="rounded"/>
+    <img src={image3} alt="" class="rounded" data-tip data-for="img1"/>
+    <ReactTooltip id="img1">
+      Haz click y desliza con el mouse.
+    </ReactTooltip>
     <h5>Titulo</h5>
     <div class="mt-3 info">
       <span class="text-1 d-block">Descripción</span>
@@ -79,7 +86,10 @@ export default class SwipeToSlide extends Component {
   <div>
     <div class="card-body">
     <div class="product-2 align-items-center p-2 text-center">
-    <img src={image4} alt="" class="rounded"/>
+    <img src={image4} alt="" class="rounded"data-tip data-for="img1"/>
+    <ReactTooltip id="img1">
+      Haz click y desliza con el mouse.
+    </ReactTooltip>
     <h5>Titulo</h5>
     <div class="mt-3 info">
       <span class="text-1 d-block">Descripción</span>
@@ -101,7 +111,10 @@ export default class SwipeToSlide extends Component {
   <div>
     <div class="card-body">
     <div class="product-2 align-items-center p-2 text-center">
-    <img src={image1} alt="" class="rounded"/>
+    <img src={image1} alt="" class="rounded" data-tip data-for="img1"/>
+    <ReactTooltip id="img1">
+      Haz click y desliza con el mouse.
+    </ReactTooltip>
     <h5>Titulo</h5>
     <div class="mt-3 info">
       <span class="text-1 d-block">Descripción</span>
@@ -123,7 +136,10 @@ export default class SwipeToSlide extends Component {
   <div>
     <div class="card-body">
     <div class="product-2 align-items-center p-2 text-center">
-    <img src={image2} alt="" class="rounded"/>
+    <img src={image2} alt="" class="rounded" data-tip data-for="img1"/>
+    <ReactTooltip id="img1">
+      Haz click y desliza con el mouse.
+    </ReactTooltip>
     <h5>Titulo</h5>
     <div class="mt-3 info">
       <span class="text-1 d-block">Descripción</span>
@@ -145,7 +161,10 @@ export default class SwipeToSlide extends Component {
   <div>
     <div class="card-body">
     <div class="product-2 align-items-center p-2 text-center">
-    <img src={image3} alt="" class="rounded"/>
+    <img src={image3} alt="" class="rounded" data-tip data-for="img1"/>
+    <ReactTooltip id="img1">
+      Haz click y desliza con el mouse.
+    </ReactTooltip>
     <h5>Titulo</h5>
     <div class="mt-3 info">
       <span class="text-1 d-block">Descripción</span>
@@ -167,7 +186,10 @@ export default class SwipeToSlide extends Component {
   <div>
     <div class="card-body">
     <div class="product-2 align-items-center p-2 text-center">
-    <img src={image4} alt="" class="rounded"/>
+    <img src={image4} alt="" class="rounded" data-tip data-for="img1"/>
+    <ReactTooltip id="img1">
+      Haz click y desliza con el mouse.
+    </ReactTooltip>
     <h5>Titulo</h5>
     <div class="mt-3 info">
       <span class="text-1 d-block">Descripción</span>
@@ -189,7 +211,10 @@ export default class SwipeToSlide extends Component {
   <div>
     <div class="card-body">
     <div class="product-2 align-items-center p-2 text-center">
-    <img src={image4} alt="" class="rounded"/>
+    <img src={image4} alt="" class="rounded" data-tip data-for="img1"/>
+    <ReactTooltip id="img1">
+      Haz click y desliza con el mouse.
+    </ReactTooltip>
     <h5>Titulo</h5>
     <div class="mt-3 info">
       <span class="text-1 d-block">Descripción</span>
