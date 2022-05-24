@@ -7,6 +7,7 @@ import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import Footer from '../components/footer';
 import { FaCreditCard } from "react-icons/fa";
+
 const url="http://localhost:3000/cartData/";
 
 
@@ -75,7 +76,7 @@ peticionDelete=()=>{
   })
 }
 
-seleccionarPintura=(cartData)=>{
+seleccionarPedido=(cartData)=>{
   this.setState({
     tipoModal: 'actualizar',
     form: {
@@ -115,12 +116,12 @@ handleChange=async e=>{
         break;
       case "Low price":
         this.setState({
-          paint: data.sort((a, b) => (a.price > b.price ? 1 : -1))
+          cart: data.sort((a, b) => (a.price > b.price ? 1 : -1))
         });
         break;
       case "High price":
         this.setState({
-          paint: data.sort((a, b) => (b.price > a.price ? 1 : -1))
+          cart: data.sort((a, b) => (b.price > a.price ? 1 : -1))
         });
         break;
       default:
@@ -154,9 +155,11 @@ handleChange=async e=>{
             
                 <p>{cartData.price}€</p>
                 <div>
-                  <button className="btn btn-primary" onClick={()=>{this.seleccionarPintura(cartData); this.modalInsertar()}}><FaCreditCard/></button>
+                <a href="payment" target="_blank" rel="noreferrer">
+                  <button className="btn btn-primary"><FaCreditCard/></button>
+                  </a>
                   {"   "}
-                  <button className="btn btn-danger" onClick={()=>{this.seleccionarPintura(cartData); this.setState({modalEliminar: true})}}><FontAwesomeIcon icon={faTrashAlt}/></button>
+                  <button className="btn btn-danger" onClick={()=>{this.seleccionarPedido(cartData); this.setState({modalEliminar: true})}}><FontAwesomeIcon icon={faTrashAlt}/></button>
               
               </div>
               <br/>
@@ -174,10 +177,7 @@ handleChange=async e=>{
                 <ModalBody>
                   <br/>
                   <div className="form-group">
-                    <br /> <br/> <br /> <br/> <br /> <br/> <br/> <br/> <br/>  <br /> <br/> <br/> <br/> 
-                    <label htmlFor="id">ID</label>
-                    <input className="form-control" type="text" name="id" id="id" readOnly onChange={this.handleChange} value={form?form.id: ''}/>
-                    <br />
+                    <br /> <br/> <br /> <br/> <br /> <br/> <br/> <br/> <br/>  <br />
                     <label htmlFor="image">Imagen</label>
                     <input className="form-control" type="text" name="image" id="image" onChange={this.handleChange} value={form?form.image: ''}/>
                     <br />
@@ -195,10 +195,10 @@ handleChange=async e=>{
                     <button className="btn btn-success" onClick={()=>this.peticionPost()}>
                     Insertar
                   </button>:
-                   
-                  <button className="btn btn-primary" onClick={()=>this.peticionPut()}>
-                    Comprar
+                   <a href="payment" target="_blank" rel="noreferrer">
+                  <button className="btn btn-primary">
                   </button>
+                  </a>
                   
                   }
                     <button className="btn btn-danger" onClick={()=>this.modalInsertar()}>Cancelar</button>
@@ -207,7 +207,7 @@ handleChange=async e=>{
           <Modal isOpen={this.state.modalEliminar}>
             <ModalBody>
             <br /> <br/> <br/> <br/>
-               Estás seguro que deseas eliminar el {form && form.title} del carrito?
+               Estás seguro que deseas eliminar el pedido {form && form.title} del carrito?
             </ModalBody>
             <ModalFooter>
               <button className="btn btn-danger" onClick={()=>this.peticionDelete()}>Sí</button>

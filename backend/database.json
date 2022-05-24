@@ -223,6 +223,16 @@
       "id": 2,
       "user": "Álvaro",
       "pwd": "alavarito"
+    },
+    {
+      "user": "daniell",
+      "pwd": "d@n13llT",
+      "id": 3
+    },
+    {
+      "user": "daniell",
+      "pwd": "d@n13llT",
+      "id": 4
     }
   ],
   "cartData": [

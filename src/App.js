@@ -19,6 +19,8 @@ import Users from './pages/users';
 
 import Cart from './pages/shoppingCart';
 
+import Payment from './pages/payment';
+
 function App() {
     return (
         <Layout>
@@ -55,6 +57,9 @@ function App() {
                 </Route>
                 <Route path="/users">
                     <Users/>
+                </Route>
+                <Route path="/payment">
+                    <Payment/>
                 </Route>
             </Switch>
             {/*<Footer/>*/}

@@ -101,10 +101,13 @@ const Register = () => {
                     <br/>
                      <div class="col-md-6 col-lg-4 offset-lg-4 offset-md-3 mt-5">
           <div class="bg-light p-5 border shadow">
-                    <h1 class="center">Success {user}!</h1>
+                <center>
+                    <h1 class="center">Acceso con existo {user}!</h1>
+                    <br/>
                     <p>
-                        <a href="login">Sign In</a>
+                        <a href="home">Ir al inicio</a>
                     </p>
+                </center>      
                     </div>
                     </div>
                 </section>
@@ -182,9 +185,9 @@ const Register = () => {
                         />
                         <ReactTooltip id="Cpwd">Las contraseñas deben coincidir</ReactTooltip>
 
-                        <button class="btn btn-dark w-100 my-3 shadow" disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</button>
+                        <button class="btn btn-dark w-100 my-3 shadow" disabled={!validName || !validPwd || !validMatch ? true : false}>Log In</button>
                     </form>
-                   <p class="text-center ">Ya tienes una cuenta? <a href="login" color="black">Please Sign Up</a></p>
+                   {/*<p class="text-center ">Ya tienes una cuenta? <a href="login" color="black">Please Sign Up</a></p>*/}
                    </div>
                    </div>
                 </section>

@@ -284,6 +284,8 @@ body.active-modal {
   overflow-y: hidden;
 }
 
+body {background-color: white;}
+
 .btn-modal {
   padding: 10px 20px;
   display: block;
