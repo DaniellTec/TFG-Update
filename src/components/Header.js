@@ -69,17 +69,17 @@ const Header = () => {
                         </li>
                         */}
                         <li>
-                            <Link to="/paintt" onClick={menuToggleHandler}>
+                            <Link to="/paint" onClick={menuToggleHandler}>
                                 Pinturas
                             </Link>
                         </li>
                         <li>
-                            <Link to="/photoo" onClick={menuToggleHandler}>
+                            <Link to="/photo" onClick={menuToggleHandler}>
                                 Fotografías
                             </Link>
                         </li>
                         <li>
-                            <Link to="/museumm" onClick={menuToggleHandler}>
+                            <Link to="/museum" onClick={menuToggleHandler}>
                                 Museos
                             </Link>
                         </li>
@@ -89,7 +89,7 @@ const Header = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/cart" onClick={menuToggleHandler}>
+                            <Link to="/shoppingCart" onClick={menuToggleHandler}>
                             <FaShoppingCart/>
                             </Link>
                         </li>              

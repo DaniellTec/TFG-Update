@@ -6,13 +6,12 @@ import CookieConsent from "react-cookie-consent";
 import Swal from 'sweetalert2';
 
 import Home from "./pages/home";
-import Paint from "./pages/paintt";
-import Abstract from "./pages/abstract";
-import Oil from "./pages/oil";
-
-import Photoo from "./pages/photoo";
-
-import Museum from "./pages/museumm";
+import Paint from "./pages/paint";
+import Photo from "./pages/photo";
+import PaintRoot from "./pages/paintRoot";
+import PhotoRoot from "./pages/photoRoot";
+import Museum from "./pages/museum";
+import MuseumRoot from "./pages/museumRoot";
 import Login from './pages/login';
 import Register from './pages/register';
 
@@ -27,20 +26,23 @@ function App() {
                 <Route path="/" exact>
                     <Home/>
                 </Route>
-                <Route path="/paintt">
+                <Route path="/paint">
                     <Paint/>
                 </Route>
-                <Route path="/abstract">
-                    <Abstract/>
+                <Route path="/photo">
+                    <Photo/>
                 </Route>
-                <Route path="/oil">
-                    <Oil/>
-                </Route>
-                <Route path="/photoo">
-                    <Photoo/>
-                </Route>
-                <Route path="/museumm">
+                <Route path="/museum">
                     <Museum/>
+                </Route>
+                <Route path="/paintRoot">
+                    <PaintRoot/>
+                </Route>
+                <Route path="/photoRoot">
+                    <PhotoRoot/>
+                </Route>
+                <Route path="/museumRoot">
+                    <MuseumRoot/>
                 </Route>
                 <Route path="/login">
                     <Login/>
@@ -83,7 +85,8 @@ function App() {
                         icon: 'error',
                         title: 'Oops...ha habido un error',
                         text: 'Tienes que aceptar las cookies.',
-                        timer: 1500
+                        heightAuto: false,
+                        timer: 2000
                       }).then((result) => {
                          if(result){
                            // Do Stuff here for success

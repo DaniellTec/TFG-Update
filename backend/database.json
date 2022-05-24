@@ -142,67 +142,75 @@
   "museumData": [
     {
       "id": 1,
+      "image": "https://i.ibb.co/GQctHCZ/1.jpg",
       "title": "Museo del Prado",
       "description": "Amplia representación de obras Velázquez, Goya, Tiziano y Rubens en este museo con horario de entrada gratis y guías del museo para descargar gratis",
-      "location": "C. de Ruiz de Alarcón, 23, 28014 Madrid",
+      "location": "C. de Ruiz de Alarcón, 23, 28014",
       "review": 800,
-      "image": "https://i.ibb.co/rHLyFDZ/prado.jpg"
+      "web": "https://www.museodelprado.es/en"
     },
     {
       "id": 2,
+      "image": "https://i.ibb.co/G98c3HN/2.jpg",
       "title": "Museo Reina Sofía",
       "description": "El Museo Nacional Centro de Arte Reina Sofía centrado en arte contemporaneo con obras de grandes artistas españoles del siglo XX",
-      "location": "C. de Sta. Isabel, 52, 28012 Madrid",
+      "location": "C. de Sta. Isabel, 52, 28012",
       "review": 600,
-      "image": "https://i.ibb.co/7NZ7Syj/reina.jpg"
+      "web": "https://www.museoreinasofia.es/"
     },
     {
       "id": 3,
+      "image": "https://i.ibb.co/T1mv6M9/3.jpg",
       "title": "Museo Nacional de Artes Decorativas",
       "description": "Exposición de elementos de ornamentación de todo tipo: mobiliario, cristal, cerámica, alfombras, tapices, juguetes, etc. pertenecientes a los siglos XV al XIX, y objetos de las dinastías Ming y Qing.",
-      "location": "P.º del Prado, 8, 28014 Madrid",
+      "location": "P.º del Prado, 8, 28014",
       "review": 700,
-      "image": "https://i.ibb.co/4dxqngQ/decor.jpg"
+      "web": "https://www.culturaydeporte.gob.es/mnartesdecorativas/portada.html"
     },
     {
       "id": 4,
+      "image": "https://i.ibb.co/7QykRk8/4.jpg",
       "title": "Museo Thyssen Bornemisza",
       "description": "Exposición de pinturas que van desde los primitivos flamencos o italianos hasta el siglo XX, destacando retratos del Renacimiento, Impresionismo, Expresionismo y del siglo XX",
-      "location": "Manuel Bustamante",
+      "location": " P.º del Prado, 8, 28014",
       "review": 700,
-      "image": "https://i.ibb.co/wJK1FYR/tyssen.jpg"
+      "web": "https://www.museothyssen.org/visita/medidas-visita-segura"
     },
     {
       "id": 5,
+      "image": "https://i.ibb.co/jD6h3ht/5.jpg",
       "title": "Museo Sorolla",
       "description": "El Museo Sorolla aspira a promover al máximo el conocimiento y disfrute del legado de Joaquín Sorolla por todo tipo de públicos, en el convencimiento de que este legado, y en particular las obras de Joaquín Sorolla, puede ofrecerles una experiencia emocional y estética positiva y enriquecedora, estimular sus sentidos, avivar en ellos la conciencia del sentido de la vista como instrumento de conocimiento y animarlos a utilizar sus propias capacidades creativas.",
-      "location": "P.º del Gral. Martínez Campos, 37, 28010 Madrid",
+      "location": "P.º del Gral. Martínez Campos, 37, 28010",
       "review": 400,
-      "image": "https://i.ibb.co/gztH7kh/sorrolla.jpg"
+      "web": "https://www.culturaydeporte.gob.es/msorolla/inicio.html"
     },
     {
-      "id": 5,
+      "id": 6,
+      "image": "https://i.ibb.co/10tC6DS/6.jpg",
       "title": "Museo arqueológico nacional",
       "description": "El Museo Arqueológico Nacional es una institución pública cuyo objetivo es ofrecer a todos los ciudadanos una interpretación rigurosa, atractiva, interesante y crítica del significado de los objetos que pertenecieron a los distintos pueblos de la actual España y del ámbito mediterráneo, desde la Antigüedad hasta épocas recientes, de manera que el conocimiento",
       "location": "Calle de Serrano, 13, 28001 Madrid",
       "review": 400,
-      "image": "https://i.ibb.co/nQXMFrK/arquer.jpg"
-    },
-    {
-      "id": 6,
-      "title": "Museo Cerralbo",
-      "description": "Es uno de los museos más importantes de Madrid, aunque también de los más desconocidos. Está situado en lo que fue la casa-palacio del XVII Marqués de Cerralbo y su visita traslada al visitante a la forma de vida de una familia aristocrática de finales del siglo XIX.",
-      "location": "C. de Ventura Rodríguez, 17, 28008 Madrid",
-      "review": 300,
-      "image": "https://i.ibb.co/R32VK8v/cerral.jpg"
+      "web": "http://www.man.es/man/home.html"
     },
     {
       "id": 7,
+      "image": "https://i.ibb.co/4pPWCWG/7.jpg",
+      "title": "Museo Cerralbo",
+      "description": "Es uno de los museos más importantes de Madrid, aunque también de los más desconocidos. Está situado en lo que fue la casa-palacio del XVII Marqués de Cerralbo y su visita traslada al visitante a la forma de vida de una familia aristocrática de finales del siglo XIX.",
+      "location": "C. de Ventura Rodríguez, 17, 28008",
+      "review": 300,
+      "web": "https://www.culturaydeporte.gob.es/mcerralbo/home.html"
+    },
+    {
+      "id": 87,
+      "image": "https://i.ibb.co/sJHmYVb/8.jpg",
       "title": "Museo Lázaro Galdiano",
       "description": "El Museo Lázaro Galdiano, en Madrid, es un museo estatal de origen privado, que alberga una amplia y heterogénea colección, formada con interés enciclopédico hacia todas las artes y técnicas.",
-      "location": "C. Serrano, 122, 28006 Madrid",
+      "location": "C. Serrano, 122, 28006",
       "review": 850,
-      "image": "https://i.ibb.co/WkBqcGC/lazaro.jpg"
+      "web": "http://www.flg.es/"
     }
   ],
   "userData": [
@@ -218,15 +226,6 @@
     }
   ],
   "cartData": [
-    {
-      "image": "https://i.ibb.co/fGf8SKd/1.jpg",
-      "title": "Blacksad",
-      "author": "Juanjo Guarnido",
-      "dimensions": "521 x 700",
-      "category": "Oleo",
-      "price": "1100",
-      "id": 1
-    },
     {
       "image": "https://i.ibb.co/9NxYz1V/2.jpg",
       "title": "Face",

@@ -59,6 +59,12 @@ const Footer = () => {
             <Heading>Contact Us</Heading>
             <FooterLink href="">Madrid</FooterLink>
           </Column>
+          <Column>
+            <Heading>Root Access</Heading>
+            <FooterLink href="paintRoot">Pinturas</FooterLink>
+            <FooterLink href="/photoRoot">Fotografías</FooterLink>
+            <FooterLink href="museumRoot">Museos</FooterLink>
+          </Column>
         </Row>
       </Container>
     </Box>

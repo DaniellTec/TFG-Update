@@ -6,8 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import Footer from '../components/footer';
-
-
+import { FaCreditCard } from "react-icons/fa";
 const url="http://localhost:3000/cartData/";
 
 
@@ -141,6 +140,7 @@ handleChange=async e=>{
     <>
     <div>
       <br/>
+    <center><h1>Carrito</h1></center>
     
     <section>
         {this.state.data.map(cartData=>{
@@ -148,12 +148,13 @@ handleChange=async e=>{
 
           <div className="boxCart" >
             <div>
+            
             <img src = {cartData.image} width="275" className="imageProduct"/>
                 <p>{cartData.title}</p>
             
                 <p>{cartData.price}€</p>
                 <div>
-                  <button className="btn btn-primary" onClick={()=>{this.seleccionarPintura(cartData); this.modalInsertar()}}><FontAwesomeIcon icon={faEdit}/></button>
+                  <button className="btn btn-primary" onClick={()=>{this.seleccionarPintura(cartData); this.modalInsertar()}}><FaCreditCard/></button>
                   {"   "}
                   <button className="btn btn-danger" onClick={()=>{this.seleccionarPintura(cartData); this.setState({modalEliminar: true})}}><FontAwesomeIcon icon={faTrashAlt}/></button>
               
@@ -196,7 +197,7 @@ handleChange=async e=>{
                   </button>:
                    
                   <button className="btn btn-primary" onClick={()=>this.peticionPut()}>
-                    Actualizar
+                    Comprar
                   </button>
                   
                   }
@@ -206,7 +207,7 @@ handleChange=async e=>{
           <Modal isOpen={this.state.modalEliminar}>
             <ModalBody>
             <br /> <br/> <br/> <br/>
-               Estás seguro que deseas eliminar la pintura {form && form.title}?
+               Estás seguro que deseas eliminar el {form && form.title} del carrito?
             </ModalBody>
             <ModalFooter>
               <button className="btn btn-danger" onClick={()=>this.peticionDelete()}>Sí</button>
