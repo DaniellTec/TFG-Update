@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: woa
+    image: woa
+    build:
+      context: .
+      target: development
+    volumes:
+      - ./src:/app/src
+    ports:
+      - 4000:4000

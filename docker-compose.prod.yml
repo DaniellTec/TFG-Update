@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+
+  woa-prod:
+    container_name: woa-prod
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - '4000:4000'

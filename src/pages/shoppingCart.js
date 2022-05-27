@@ -25,7 +25,7 @@ class testProduct extends Component {
   }
   state={
   data:[],
-  modalInsertar: false,
+  modalComprar: false,
   modalEliminar: false,
   form:{
     id: '',
@@ -155,9 +155,9 @@ handleChange=async e=>{
             
                 <p>{cartData.price}€</p>
                 <div>
-                <a href="payment" target="_blank" rel="noreferrer">
-                  <button className="btn btn-primary"><FaCreditCard/></button>
-                  </a>
+                
+                  <button className="btn btn-primary" onClick={()=>{this.seleccionarPedido(cartData); this.setState({modalEliminar: true})}}><FaCreditCard/></button>
+                  
                   {"   "}
                   <button className="btn btn-danger" onClick={()=>{this.seleccionarPedido(cartData); this.setState({modalEliminar: true})}}><FontAwesomeIcon icon={faTrashAlt}/></button>
               
@@ -169,40 +169,15 @@ handleChange=async e=>{
         })}
         <hr/>
         </section>
-             <Modal isOpen={this.state.modalInsertar}>
-                <ModalHeader style={{display: 'block'}}>
-                  <span style={{float: 'right'}} onClick={()=>this.modalInsertar()}>x</span>
-                </ModalHeader>
-
-                <ModalBody>
-                  <br/>
-                  <div className="form-group">
-                    <br /> <br/> <br /> <br/> <br /> <br/> <br/> <br/> <br/>  <br />
-                    <label htmlFor="image">Imagen</label>
-                    <input className="form-control" type="text" name="image" id="image" onChange={this.handleChange} value={form?form.image: ''}/>
-                    <br />
-                    <label htmlFor="title">Título</label>
-                    <input className="form-control" type="text" name="title" id="title" onChange={this.handleChange} value={form?form.title: ''}/>
-                    <br />
-                   
-                    <label htmlFor="price">Precio</label>
-                    <input className="form-control" type="text" name="price" id="price" onChange={this.handleChange} value={form?form.price:''}/>
-                  </div>
-                </ModalBody>
-
-                <ModalFooter>
-                  {this.state.tipoModal=='insertar'?
-                    <button className="btn btn-success" onClick={()=>this.peticionPost()}>
-                    Insertar
-                  </button>:
-                   <a href="payment" target="_blank" rel="noreferrer">
-                  <button className="btn btn-primary">
-                  </button>
-                  </a>
-                  
-                  }
-                    <button className="btn btn-danger" onClick={()=>this.modalInsertar()}>Cancelar</button>
-                </ModalFooter>
+        <Modal isOpen={this.state.modalComprar}>
+            <ModalBody>
+            <br /> <br/> <br/> <br/>
+               Deseas comprar el pedido {form && form.title}?
+            </ModalBody>
+            <ModalFooter>
+              <button className="btn btn-danger" onClick={()=>this.peticionDelete()}>Sí</button>
+              <button className="btn btn-secundary" onClick={()=>this.setState({modalEliminar: false})}>No</button>
+            </ModalFooter>
           </Modal>
           <Modal isOpen={this.state.modalEliminar}>
             <ModalBody>
@@ -210,7 +185,9 @@ handleChange=async e=>{
                Estás seguro que deseas eliminar el pedido {form && form.title} del carrito?
             </ModalBody>
             <ModalFooter>
+            <a href="payment" target="_blank" rel="noreferrer">
               <button className="btn btn-danger" onClick={()=>this.peticionDelete()}>Sí</button>
+              </a>
               <button className="btn btn-secundary" onClick={()=>this.setState({modalEliminar: false})}>No</button>
             </ModalFooter>
           </Modal>

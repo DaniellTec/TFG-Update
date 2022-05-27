@@ -237,15 +237,6 @@
   ],
   "cartData": [
     {
-      "image": "https://i.ibb.co/9NxYz1V/2.jpg",
-      "title": "Face",
-      "author": "José Villaseñor",
-      "dimensions": "521 x 700",
-      "category": "Abstract",
-      "price": 700,
-      "id": 2
-    },
-    {
       "image": "https://i.ibb.co/KFn8TBJ/16.jpg",
       "title": "Dog",
       "author": "Michelle Williamson",
@@ -269,6 +260,15 @@
       "category": "Cities",
       "price": 775,
       "id": 5
+    },
+    {
+      "image": "https://i.ibb.co/fGf8SKd/1.jpg",
+      "title": "Blacksad",
+      "author": "Juanjo Guarnido",
+      "dimensions": "521 x 700",
+      "category": "Oleo",
+      "price": "1100",
+      "id": 6
     }
   ]
 }

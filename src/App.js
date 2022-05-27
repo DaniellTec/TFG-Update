@@ -4,6 +4,7 @@ import Layout from "./components/Layout";
 import { Switch, Route } from "react-router-dom";
 import CookieConsent from "react-cookie-consent";
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet';
 
 import Home from "./pages/home";
 import Paint from "./pages/paint";
@@ -23,6 +24,15 @@ import Payment from './pages/payment';
 
 function App() {
     return (
+        <>
+        <div className="App">
+        <Helmet>
+          <title>World Of Art</title>
+          <meta name="description" content="App Description" />
+          <meta name="theme-color" content="#008f68" />
+        </Helmet>
+      </div>
+  
         <Layout>
             <Switch>
                 <Route path="/" exact>
@@ -103,7 +113,7 @@ function App() {
                 <a href=""> Para saber más</a>
             </CookieConsent>
           </Layout>
-       
+          </>
     );
 }
 
