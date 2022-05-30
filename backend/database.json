@@ -237,6 +237,7 @@
   ],
   "cartData": [
     {
+<<<<<<< HEAD
       "image": "https://i.ibb.co/fGf8SKd/1.jpg",
       "title": "Blacksad",
       "author": "Juanjo Guarnido",
@@ -249,6 +250,11 @@
       "image": "https://i.ibb.co/nRFgvCf/14.webp",
       "title": "Red lips",
       "author": "Manuel Bustamante",
+=======
+      "image": "https://i.ibb.co/KFn8TBJ/16.jpg",
+      "title": "Dog",
+      "author": "Michelle Williamson",
+>>>>>>> b0346c226a6b9768c4980fbbb1013b7b25a0e361
       "dimensions": "521 x 700",
       "category": "Portrait",
       "price": 1500,
@@ -259,6 +265,7 @@
       "title": "Old city",
       "dimensions": "521 x 700",
       "category": "Cities",
+<<<<<<< HEAD
       "price": 785,
       "id": 8
     },
@@ -269,6 +276,19 @@
       "category": "Cities",
       "price": 810,
       "id": 9
+=======
+      "price": 775,
+      "id": 5
+    },
+    {
+      "image": "https://i.ibb.co/fGf8SKd/1.jpg",
+      "title": "Blacksad",
+      "author": "Juanjo Guarnido",
+      "dimensions": "521 x 700",
+      "category": "Oleo",
+      "price": "1100",
+      "id": 6
+>>>>>>> b0346c226a6b9768c4980fbbb1013b7b25a0e361
     }
   ]
 }

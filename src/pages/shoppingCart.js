@@ -157,7 +157,11 @@ handleChange=async e=>{
                 <p>{cartData.price}€</p>
                 <div>
                 
+<<<<<<< HEAD
                   <button className="btn btn-primary" onClick={()=>{this.seleccionarPedido(cartData); this.setState({modalComprar: true})}}><FaCreditCard/></button>
+=======
+                  <button className="btn btn-primary" onClick={()=>{this.seleccionarPedido(cartData); this.setState({modalEliminar: true})}}><FaCreditCard/></button>
+>>>>>>> b0346c226a6b9768c4980fbbb1013b7b25a0e361
                   
                   {"   "}
                   <button className="btn btn-danger" onClick={()=>{this.seleccionarPedido(cartData); this.setState({modalEliminar: true})}}><FontAwesomeIcon icon={faTrashAlt}/></button>
@@ -176,9 +180,13 @@ handleChange=async e=>{
                Deseas comprar el pedido {form && form.title}?
             </ModalBody>
             <ModalFooter>
+<<<<<<< HEAD
             <a href="payment" target="_blank" rel="noreferrer">
               <button className="btn btn-danger" onClick={()=>this.peticionDelete()}>Sí</button>
               </a>
+=======
+              <button className="btn btn-danger" onClick={()=>this.peticionDelete()}>Sí</button>
+>>>>>>> b0346c226a6b9768c4980fbbb1013b7b25a0e361
               <button className="btn btn-secundary" onClick={()=>this.setState({modalEliminar: false})}>No</button>
             </ModalFooter>
           </Modal>
@@ -188,9 +196,15 @@ handleChange=async e=>{
                Estás seguro que deseas eliminar el pedido {form && form.title} del carrito?
             </ModalBody>
             <ModalFooter>
+<<<<<<< HEAD
             
               <button className="btn btn-danger" onClick={()=>this.peticionDelete()}>Sí</button>
               
+=======
+            <a href="payment" target="_blank" rel="noreferrer">
+              <button className="btn btn-danger" onClick={()=>this.peticionDelete()}>Sí</button>
+              </a>
+>>>>>>> b0346c226a6b9768c4980fbbb1013b7b25a0e361
               <button className="btn btn-secundary" onClick={()=>this.setState({modalEliminar: false})}>No</button>
             </ModalFooter>
           </Modal>
