@@ -237,38 +237,38 @@
   ],
   "cartData": [
     {
-      "image": "https://i.ibb.co/9NxYz1V/2.jpg",
-      "title": "Face",
-      "author": "José Villaseñor",
+      "image": "https://i.ibb.co/fGf8SKd/1.jpg",
+      "title": "Blacksad",
+      "author": "Juanjo Guarnido",
       "dimensions": "521 x 700",
-      "category": "Abstract",
-      "price": 700,
-      "id": 2
+      "category": "Oleo",
+      "price": "1100",
+      "id": 6
     },
     {
-      "image": "https://i.ibb.co/KFn8TBJ/16.jpg",
-      "title": "Dog",
-      "author": "Michelle Williamson",
+      "image": "https://i.ibb.co/nRFgvCf/14.webp",
+      "title": "Red lips",
+      "author": "Manuel Bustamante",
       "dimensions": "521 x 700",
-      "category": "Oil",
-      "price": 750,
-      "id": 3
+      "category": "Portrait",
+      "price": 1500,
+      "id": 7
     },
     {
-      "image": "https://i.ibb.co/cYRm6yz/3.jpg",
-      "title": "Tunnel",
-      "dimensions": "521 x 700",
-      "category": "Modern",
-      "price": "600",
-      "id": 4
-    },
-    {
-      "image": "https://i.ibb.co/Sx1nYjD/26.jpg",
-      "title": "Japan Village",
+      "image": "https://i.ibb.co/X49949H/21.jpg",
+      "title": "Old city",
       "dimensions": "521 x 700",
       "category": "Cities",
-      "price": 775,
-      "id": 5
+      "price": 785,
+      "id": 8
+    },
+    {
+      "image": "https://i.ibb.co/ZKD88Xf/25.jpg",
+      "title": "Mountain Lake",
+      "dimensions": "521 x 700",
+      "category": "Cities",
+      "price": 810,
+      "id": 9
     }
   ]
 }
